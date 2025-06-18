@@ -1,0 +1,496 @@
+[
+  {
+    "question": "What is the time complexity of building a heap from an array of N elements?",
+    "options": ["O(N log N)", "O(N)", "O(log N)", "O(N^2)"],
+    "answer": "O(N)",
+    "explanation": "While each 'heapify' operation on a node can take O(log N), the build_heap algorithm is more efficient. The total work is a sum that converges to a linear O(N) complexity, not O(N log N)."
+  },
+  {
+    "question": "Which of the following sorting algorithms is NOT a comparison-based sort?",
+    "options": ["Merge Sort", "Quick Sort", "Heap Sort", "Counting Sort"],
+    "answer": "Counting Sort",
+    "explanation": "Counting Sort does not compare elements. It works by counting the number of objects having distinct key values, making it an integer sorting algorithm with O(n+k) complexity."
+  },
+  {
+    "question": "A red-black tree with N nodes has a maximum possible height of:",
+    "options": ["~log₂(N)", "~2 * log₂(N)", "~N", "~N/2"],
+    "answer": "~2 * log₂(N)",
+    "explanation": "A red-black tree maintains a balance property ensuring that the longest path from the root to any leaf is no more than twice as long as the shortest path, guaranteeing a height of O(log N)."
+  },
+  {
+    "question": "In the context of dynamic programming, what is memoization?",
+    "options": [
+      "A recursive approach without storing results",
+      "An optimization technique storing results of expensive function calls",
+      "A method for sorting arrays",
+      "A greedy algorithm strategy"
+    ],
+    "answer": "An optimization technique storing results of expensive function calls",
+    "explanation": "Memoization is a top-down dynamic programming technique that caches the results of function calls and returns the cached result when the same inputs occur again, avoiding redundant computations."
+  },
+  {
+    "question": "What is the worst-case time complexity of Quick Sort?",
+    "options": ["O(N log N)", "O(N)", "O(N^2)", "O(log N)"],
+    "answer": "O(N^2)",
+    "explanation": "The worst-case occurs when the pivot element is always the smallest or largest element, leading to an unbalanced partition and a complexity of O(N^2)."
+  },
+  {
+    "question": "What does 'amortized analysis' refer to in algorithms?",
+    "options": [
+      "Worst-case analysis",
+      "Average-case analysis",
+      "Analyzing a sequence of operations to find the average cost",
+      "Best-case analysis"
+    ],
+    "answer": "Analyzing a sequence of operations to find the average cost",
+    "explanation": "Amortized analysis gives the average cost of an operation in a sequence, even if some individual operations in that sequence are very costly."
+  },
+  {
+    "question": "Which complexity class represents an algorithm whose time doubles for every single addition to the input size?",
+    "options": ["O(log N)", "O(N)", "O(N^2)", "O(2^N)"],
+    "answer": "O(2^N)",
+    "explanation": "Exponential time complexity, O(2^N), means the running time grows exponentially with the input size. This is characteristic of problems like finding all subsets of a set."
+  },
+  {
+    "question": "The Master Theorem can be used to solve which type of recurrence relations?",
+    "options": [
+      "All recurrence relations",
+      "Only linear recurrence relations",
+      "Divide and conquer recurrences of the form T(n) = aT(n/b) + f(n)",
+      "Only logarithmic recurrence relations"
+    ],
+    "answer": "Divide and conquer recurrences of the form T(n) = aT(n/b) + f(n)",
+    "explanation": "The Master Theorem provides a cookbook-style solution for analyzing divide-and-conquer algorithms that follow its specific structural form."
+  },
+  {
+    "question": "Which algorithm is used to find the minimum spanning tree in a dense graph most efficiently?",
+    "options": [
+      "Kruskal's Algorithm",
+      "Prim's Algorithm",
+      "Dijkstra's Algorithm",
+      "Floyd-Warshall Algorithm"
+    ],
+    "answer": "Prim's Algorithm",
+    "explanation": "Prim's algorithm, when implemented with a Fibonacci heap, has a time complexity of O(E + V log V), which is generally better for dense graphs (where E is close to V^2) than Kruskal's O(E log V)."
+  },
+  {
+    "question": "What problem does Dijkstra's algorithm fail to solve?",
+    "options": [
+      "Single source shortest path",
+      "Graphs with negative weight edges",
+      "Graphs with cycles",
+      "All-pairs shortest path"
+    ],
+    "answer": "Graphs with negative weight edges",
+    "explanation": "Dijkstra's greedy approach doesn't work for graphs with negative edge weights, as it can prematurely finalize the shortest path to a node."
+  },
+  {
+    "question": "The Floyd-Warshall algorithm is used for:",
+    "options": [
+      "Single source shortest path",
+      "Minimum spanning tree",
+      "All-pairs shortest path",
+      "Topological sorting"
+    ],
+    "answer": "All-pairs shortest path",
+    "explanation": "It's a dynamic programming algorithm that finds the shortest paths between all pairs of vertices in a weighted graph."
+  },
+  {
+    "question": "Topological Sort can be applied to which kind of graphs?",
+    "options": [
+      "Directed Acyclic Graphs (DAGs)",
+      "Undirected graphs",
+      "Complete graphs",
+      "Cyclic graphs"
+    ],
+    "answer": "Directed Acyclic Graphs (DAGs)",
+    "explanation": "Topological sorting is a linear ordering of vertices such that for every directed edge from vertex u to vertex v, u comes before v. This is only possible if the graph has no directed cycles."
+  },
+  {
+    "question": "Bellman-Ford algorithm is used to find the single-source shortest paths in a graph with:",
+    "options": [
+      "Only positive weights",
+      "No cycles",
+      "Negative weight edges",
+      "Only unweighted edges"
+    ],
+    "answer": "Negative weight edges",
+    "explanation": "Unlike Dijkstra's, the Bellman-Ford algorithm can handle graphs with negative edge weights and can also detect negative weight cycles."
+  },
+  {
+    "question": "An articulation point (or cut vertex) in a graph is a vertex whose removal:",
+    "options": [
+      "Disconnects the graph",
+      "Increases the number of connected components",
+      "Reduces the number of edges",
+      "Creates a cycle"
+    ],
+    "answer": "Increases the number of connected components",
+    "explanation": "Removing an articulation point splits a connected component into multiple components, making it a critical point for network connectivity."
+  },
+  {
+    "question": "Kosaraju's algorithm is used to find what in a directed graph?",
+    "options": [
+      "Minimum Spanning Tree",
+      "Shortest Path",
+      "Strongly Connected Components",
+      "Bridges"
+    ],
+    "answer": "Strongly Connected Components",
+    "explanation": "Kosaraju's algorithm efficiently finds the strongly connected components of a directed graph by performing two depth-first searches."
+  },
+  {
+    "question": "Which data structure is ideal for implementing a priority queue?",
+    "options": ["Stack", "Queue", "Heap", "Array"],
+    "answer": "Heap",
+    "explanation": "A heap (specifically a min-heap or max-heap) provides efficient O(log N) insertion and O(log N) deletion of the highest priority element."
+  },
+  {
+    "question": "A B-Tree of order m can have a maximum of how many children per node?",
+    "options": ["m-1", "m", "m+1", "2m"],
+    "answer": "m",
+    "explanation": "By definition, a B-Tree of order 'm' has at most 'm' children for any given node."
+  },
+  {
+    "question": "The AVL tree is a type of:",
+    "options": [
+      "Binary Heap",
+      "Self-balancing binary search tree",
+      "Hash Table",
+      "Trie"
+    ],
+    "answer": "Self-balancing binary search tree",
+    "explanation": "AVL trees maintain a balance factor for each node and perform rotations to ensure the tree remains balanced, guaranteeing O(log N) operations."
+  },
+  {
+    "question": "A 'Trie' data structure is most commonly used for operations involving:",
+    "options": [
+      "Numerical data",
+      "Graph data",
+      "Sets of strings or dictionary lookups",
+      "Image processing"
+    ],
+    "answer": "Sets of strings or dictionary lookups",
+    "explanation": "A Trie (or prefix tree) is a tree-like data structure that is very efficient for storing and retrieving strings, with applications like autocomplete."
+  },
+  {
+    "question": "What is the primary advantage of a hash table over a balanced binary search tree for lookups?",
+    "options": [
+      "Better worst-case performance",
+      "Lower memory usage",
+      "O(1) average-case time complexity",
+      "Easier to implement"
+    ],
+    "answer": "O(1) average-case time complexity",
+    "explanation": "With a good hash function, hash tables provide constant time O(1) lookups on average, which is faster than the O(log N) of balanced trees. However, their worst-case is O(N)."
+  },
+  {
+    "question": "What distinguishes a 'Deque' from a standard queue?",
+    "options": [
+      "It uses LIFO principle",
+      "Elements can be added or removed from both ends",
+      "It can only store integers",
+      "It is a self-balancing structure"
+    ],
+    "answer": "Elements can be added or removed from both ends",
+    "explanation": "A Deque (double-ended queue) is a generalized queue that allows efficient insertion and deletion at both its front and back."
+  },
+  {
+    "question": "A 'Segment Tree' is a data structure primarily used for:",
+    "options": [
+      "String matching",
+      "Sorting large datasets",
+      "Answering range queries over an array",
+      "Storing graph adjacencies"
+    ],
+    "answer": "Answering range queries over an array",
+    "explanation": "Segment trees are powerful for handling range queries (like finding the sum, minimum, or maximum over an interval of an array) and can also support point updates efficiently."
+  },
+  {
+    "question": "In a hash table, what is the purpose of a 'rehashing'?",
+    "options": [
+      "To find a new key for an object",
+      "To resize the hash table and redistribute elements when the load factor is too high",
+      "To delete an element",
+      "To encrypt the keys"
+    ],
+    "answer": "To resize the hash table and redistribute elements when the load factor is too high",
+    "explanation": "Rehashing is the process of creating a new, larger hash table and re-inserting all existing elements into it to maintain performance and reduce collisions."
+  },
+  {
+    "question": "What is the purpose of the Knuth-Morris-Pratt (KMP) algorithm?",
+    "options": [
+      "Graph traversal",
+      "String searching",
+      "Array sorting",
+      "Finding prime numbers"
+    ],
+    "answer": "String searching",
+    "explanation": "The KMP algorithm is an efficient string matching algorithm that avoids re-comparing characters by using information from previously matched characters, using a precomputed LPS (Longest Proper Prefix which is also Suffix) array."
+  },
+  {
+    "question": "Which of these is a 'divide and conquer' algorithm?",
+    "options": [
+      "Bubble Sort",
+      "Insertion Sort",
+      "Merge Sort",
+      "Selection Sort"
+    ],
+    "answer": "Merge Sort",
+    "explanation": "Merge Sort works by recursively dividing the array into halves, sorting them, and then merging them back together."
+  },
+  {
+    "question": "The 'Maximum Flow Min-Cut' theorem states that in a flow network, the maximum flow from source to sink is equal to:",
+    "options": [
+      "The number of edges",
+      "The number of vertices",
+      "The minimum capacity of a cut separating the source and sink",
+      "The sum of all edge capacities"
+    ],
+    "answer": "The minimum capacity of a cut separating the source and sink",
+    "explanation": "This fundamental theorem establishes a duality between the maximum flow problem and the minimum cut problem in a network, forming the basis for algorithms like Ford-Fulkerson."
+  },
+  {
+    "question": "A 'Greedy Algorithm' makes the choice that seems:",
+    "options": [
+      "Best at the current moment",
+      "To lead to a globally optimal solution",
+      "Random",
+      "Worst at the current moment to save the best for later"
+    ],
+    "answer": "Best at the current moment",
+    "explanation": "A greedy algorithm builds up a solution piece by piece, always choosing the next piece that offers the most obvious and immediate benefit, without regard for future consequences."
+  },
+  {
+    "question": "The Rabin-Karp algorithm uses what technique for efficient string matching?",
+    "options": [
+      "Dynamic Programming",
+      "Hashing",
+      "Divide and Conquer",
+      "Greedy approach"
+    ],
+    "answer": "Hashing",
+    "explanation": "Rabin-Karp uses a rolling hash function to quickly check if a substring's hash matches the pattern's hash, reducing the number of direct character comparisons needed."
+  },
+  {
+    "question": "Which problem is typically solved using backtracking?",
+    "options": [
+      "Finding the shortest path",
+      "Sorting an array",
+      "The N-Queens problem",
+      "Finding the minimum spanning tree"
+    ],
+    "answer": "The N-Queens problem",
+    "explanation": "Backtracking is an algorithmic technique for solving problems recursively by trying to build a solution incrementally, one piece at a time, and removing those solutions that fail to satisfy the constraints of the problem at any point in time."
+  },
+  {
+    "question": "What is the space complexity of an in-place sorting algorithm?",
+    "options": ["O(N)", "O(log N)", "O(1)", "O(N^2)"],
+    "answer": "O(1)",
+    "explanation": "An in-place algorithm is one that transforms input using no auxiliary data structure, requiring only a small, constant amount of extra storage space, denoted as O(1)."
+  },
+  {
+    "question": "Which data structure would be most efficient for finding the k-th smallest element in a set?",
+    "options": ["Heap", "Hash Table", "Order Statistic Tree", "Stack"],
+    "answer": "Order Statistic Tree",
+    "explanation": "An Order Statistic Tree is an augmented balanced binary search tree (like a Red-Black Tree) where each node stores the size of its subtree, allowing the k-th smallest element to be found in O(log N) time."
+  },
+  {
+    "question": "A 'Bloom Filter' is a probabilistic data structure used to test:",
+    "options": [
+      "If an element is a member of a set",
+      "The size of a set",
+      "The sum of elements in a set",
+      "The sorted order of a set"
+    ],
+    "answer": "If an element is a member of a set",
+    "explanation": "A Bloom Filter can definitively say if an element is *not* in a set, but can only say it *might be* in the set (with a possibility of false positives). It's extremely space-efficient."
+  },
+  {
+    "question": "In a 'skip list', what is the primary purpose of the multiple levels of pointers?",
+    "options": [
+      "To store different data types",
+      "To speed up search operations by allowing skips over elements",
+      "To ensure the list is sorted",
+      "To connect to other skip lists"
+    ],
+    "answer": "To speed up search operations by allowing skips over elements",
+    "explanation": "A skip list uses a hierarchy of linked lists to create express lanes, allowing searches, insertions, and deletions to be performed in O(log N) average time, similar to a balanced tree."
+  },
+  {
+    "question": "The A* search algorithm is a combination of Dijkstra's algorithm and:",
+    "options": [
+      "Breadth-First Search",
+      "Depth-First Search",
+      "Best-First Search (a greedy heuristic)",
+      "Random Search"
+    ],
+    "answer": "Best-First Search (a greedy heuristic)",
+    "explanation": "A* combines the cost-from-start function of Dijkstra's (g(n)) with a heuristic estimate of the cost-to-goal (h(n)), making it an informed search algorithm."
+  },
+  {
+    "question": "What does it mean for a sorting algorithm to be 'stable'?",
+    "options": [
+      "It has a guaranteed time complexity",
+      "It works for any data type",
+      "It maintains the relative order of records with equal keys",
+      "It runs in-place"
+    ],
+    "answer": "It maintains the relative order of records with equal keys",
+    "explanation": "Stability is important when sorting objects with multiple attributes. For example, if you sort by last name, a stable sort will keep the original first-name order for people with the same last name."
+  },
+  {
+    "question": "The Traveling Salesman Problem (TSP) is typically solved using which algorithm to find an approximate solution?",
+    "options": [
+      "Dynamic Programming",
+      "Greedy (e.g., Nearest Neighbor)",
+      "Divide and Conquer",
+      "Backtracking"
+    ],
+    "answer": "Greedy (e.g., Nearest Neighbor)",
+    "explanation": "Since TSP is NP-hard, exact solutions are infeasible for large inputs. Heuristics like the Nearest Neighbor algorithm provide a fast, approximate (but not always optimal) solution by greedily choosing the closest unvisited city."
+  },
+  {
+    "question": "A Disjoint Set Union (DSU) data structure is primarily used for:",
+    "options": [
+      "Sorting elements",
+      "Searching for elements in a string",
+      "Keeping track of a set of elements partitioned into a number of disjoint subsets",
+      "Balancing trees"
+    ],
+    "answer": "Keeping track of a set of elements partitioned into a number of disjoint subsets",
+    "explanation": "DSU (or Union-Find) is highly efficient for problems involving partitions or connectivity, like detecting cycles in a graph during Kruskal's algorithm."
+  },
+  {
+    "question": "The problem of finding the longest common subsequence is a classic example of:",
+    "options": [
+      "Greedy Algorithm",
+      "Divide and Conquer",
+      "Dynamic Programming",
+      "Backtracking"
+    ],
+    "answer": "Dynamic Programming",
+    "explanation": "The optimal solution can be constructed by finding the optimal solutions to its overlapping subproblems, which is the hallmark of dynamic programming."
+  },
+  {
+    "question": "Which of these is NOT a valid rotation in an AVL tree?",
+    "options": [
+      "Left Rotation",
+      "Right Rotation",
+      "Left-Right Rotation",
+      "Up-Down Rotation"
+    ],
+    "answer": "Up-Down Rotation",
+    "explanation": "AVL trees use four types of rotations to rebalance: Left, Right, Left-Right (a left rotation followed by a right rotation), and Right-Left (a right rotation followed by a left rotation)."
+  },
+  {
+    "question": "What is a Fenwick Tree (or Binary Indexed Tree) used for?",
+    "options": [
+      "Efficiently calculating prefix sums in a modifiable array",
+      "Storing strings for autocomplete",
+      "Visualizing graph data",
+      "Sorting numbers with negative values"
+    ],
+    "answer": "Efficiently calculating prefix sums in a modifiable array",
+    "explanation": "A Fenwick Tree allows for both point updates and prefix sum queries in O(log N) time, making it faster than a simple array for these combined operations."
+  },
+  {
+    "question": "The 'stable marriage problem' is typically solved using which algorithm?",
+    "options": [
+      "Kruskal's Algorithm",
+      "Prim's Algorithm",
+      "Gale-Shapley Algorithm",
+      "Dijkstra's Algorithm"
+    ],
+    "answer": "Gale-Shapley Algorithm",
+    "explanation": "The Gale-Shapley algorithm is an iterative method that guarantees to find a stable matching between two sets of elements, given their preferences for each other."
+  },
+  {
+    "question": "Which data structure is most suitable for implementing caches (e.g., LRU Cache)?",
+    "options": [
+      "A stack and a queue",
+      "An array and a tree",
+      "A hash map and a doubly linked list",
+      "A heap and a graph"
+    ],
+    "answer": "A hash map and a doubly linked list",
+    "explanation": "A hash map provides O(1) access to cache items, while a doubly linked list allows for O(1) removal/insertion to manage the least-recently-used order."
+  },
+  {
+    "question": "In computational geometry, what is a 'convex hull'?",
+    "options": [
+      "The largest cycle in a graph",
+      "The shortest path that visits all points",
+      "The smallest convex polygon that contains a given set of points",
+      "A 3D shape with no indentations"
+    ],
+    "answer": "The smallest convex polygon that contains a given set of points",
+    "explanation": "Imagine stretching a rubber band around a set of points on a 2D plane; the shape the rubber band forms is the convex hull."
+  },
+  {
+    "question": "The time complexity of finding an element in a balanced skip list with N elements is:",
+    "options": [
+      "O(1) on average",
+      "O(log N) on average",
+      "O(N) on average",
+      "O(N log N) on average"
+    ],
+    "answer": "O(log N) on average",
+    "explanation": "Skip lists use probabilistic linking to create multiple levels of 'express lanes', achieving logarithmic time complexity for search, insert, and delete operations, similar to balanced trees."
+  },
+  {
+    "question": "What is the primary drawback of using recursion?",
+    "options": [
+      "Code is harder to read",
+      "Risk of stack overflow for deep recursion",
+      "It is always slower than iteration",
+      "It cannot solve all problems"
+    ],
+    "answer": "Risk of stack overflow for deep recursion",
+    "explanation": "Each recursive call adds a new frame to the call stack. If the recursion goes too deep without a base case, it can exhaust the stack memory, causing a stack overflow error."
+  },
+  {
+    "question": "Manacher's algorithm is an optimized solution for finding the:",
+    "options": [
+      "Shortest common supersequence",
+      "Longest palindromic substring",
+      "Minimum spanning tree",
+      "Maximum flow in a network"
+    ],
+    "answer": "Longest palindromic substring",
+    "explanation": "Manacher's algorithm cleverly solves the longest palindromic substring problem in linear O(N) time by avoiding redundant comparisons, a significant improvement over naive or DP solutions."
+  },
+  {
+    "question": "A 'Fibonacci Heap' provides a more efficient implementation for which algorithm compared to a binary heap?",
+    "options": [
+      "Heap Sort",
+      "Dijkstra's Algorithm",
+      "Binary Search",
+      "Building a hash table"
+    ],
+    "answer": "Dijkstra's Algorithm",
+    "explanation": "A Fibonacci heap has a more efficient (amortized O(1)) 'decrease key' operation, which is heavily used in algorithms like Dijkstra's and Prim's, improving their overall time complexity on dense graphs."
+  },
+  {
+    "question": "What does an 'adjacency matrix' representation of a graph excel at?",
+    "options": [
+      "Saving space for sparse graphs",
+      "Quickly checking if an edge exists between two vertices",
+      "Iterating over all neighbors of a vertex",
+      "Adding or removing vertices"
+    ],
+    "answer": "Quickly checking if an edge exists between two vertices",
+    "explanation": "To check for an edge between vertex i and j, you simply access the matrix at M[i][j], which is an O(1) operation. Its drawback is the O(V^2) space complexity."
+  },
+  {
+    "question": "The Edit Distance (or Levenshtein distance) problem is a classic application of:",
+    "options": [
+      "Greedy Algorithms",
+      "Dynamic Programming",
+      "Backtracking",
+      "Divide and Conquer"
+    ],
+    "answer": "Dynamic Programming",
+    "explanation": "The problem of finding the minimum number of edits (insert, delete, substitute) to change one word into another has overlapping subproblems, making it a perfect fit for a bottom-up dynamic programming approach."
+  }
+]

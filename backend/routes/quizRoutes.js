@@ -1,6 +1,7 @@
 // backend/routes/quizRoutes.js
 const express = require("express");
-const axios = require("axios"); // We can keep this for dynamic questions from a simple API
+const fs = require("fs");
+const path = require("path"); // ✅ ADD THIS LINE
 const router = express.Router();
 
 // Helper function to shuffle an array
@@ -16,37 +17,38 @@ const shuffleArray = (array) => {
 // It fetches data from The Trivia API as a placeholder for dynamic, non-local questions.
 router.get("/:subject", async (req, res) => {
   // Map our subjects to categories the external API understands
-  const categoryMap = {
-    dsa: "science",
-    dbms: "science",
-    networks: "science",
-    os: "science",
-    dev: "history",
-    agile: "history",
-  };
+const subject = req.params.subject.toLowerCase();
+  const validSubjects = [
+    "dsa",
+    "dbms",
+    "os",
+    "agile",
+    "dev",
+    "networks",
+  ];
 
-  const subject = req.params.subject;
-  const category = categoryMap[subject] || "science";
-  const apiUrl = `https://the-trivia-api.com/v2/questions?limit=15&categories=${category}&difficulties=hard`;
+  if (!validSubjects.includes(subject)) {
+    return res.status(400).json({ message: "Invalid subject." });
+  }
+  const filePath = path.join(__dirname, `../questions/${subject}.json`);
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).json({ message: "Quiz file not found." });
+  }
 
   try {
-    const response = await axios.get(apiUrl);
+    const fileContent = fs.readFileSync(filePath, "utf-8");
+    let questions = JSON.parse(fileContent);
 
-    // Transform the data to match our frontend's expected format
-    const formattedQuestions = response.data.map((q) => {
-      const allOptions = shuffleArray([...q.incorrectAnswers, q.correctAnswer]);
-      return {
-        question: q.question.text,
-        options: allOptions,
-        answer: q.correctAnswer,
-        explanation: `The correct answer is ${q.correctAnswer}. This is a verified fact from our trivia source.`,
-      };
-    });
+    questions = questions.map((q) => ({
+      ...q,
+      options: shuffleArray([...q.options]),
+    }));
 
-    res.status(200).json(formattedQuestions);
+    res.json(questions.slice(0, 15));
+
   } catch (error) {
-    console.error("Error fetching from The Trivia API:", error.message);
-    res.status(500).json({ message: "Failed to fetch quiz questions." });
+    console.error("Error reading quiz file:", err.message);
+    res.status(500).json({ message: "Server error loading quiz." });
   }
 });
 

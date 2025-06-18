@@ -1,0 +1,356 @@
+[
+  {
+    "question": "What are the three pillars of Scrum theory?",
+    "options": [
+      "Planning, Execution, Review",
+      "Communication, Collaboration, Commitment",
+      "Transparency, Inspection, Adaptation",
+      "Product, Process, People"
+    ],
+    "answer": "Transparency, Inspection, Adaptation",
+    "explanation": "Scrum is founded on empirical process control theory. Transparency ensures all aspects of the process are visible. Inspection allows for checking progress. Adaptation involves adjusting the process to minimize problems."
+  },
+  {
+    "question": "Who is responsible for maximizing the value of the product resulting from the work of the Development Team in Scrum?",
+    "options": [
+      "Scrum Master",
+      "Project Manager",
+      "Lead Developer",
+      "Product Owner"
+    ],
+    "answer": "Product Owner",
+    "explanation": "The Product Owner is the sole person responsible for managing the Product Backlog, which includes prioritizing items to best achieve goals and missions."
+  },
+  {
+    "question": "What is the recommended time-box for a Daily Scrum meeting?",
+    "options": ["5 minutes", "15 minutes", "30 minutes", "60 minutes"],
+    "answer": "15 minutes",
+    "explanation": "The Daily Scrum is a brief, 15-minute event for the Development Team to synchronize activities and create a plan for the next 24 hours. It is not a status meeting for stakeholders."
+  },
+  {
+    "question": "Which of the following best describes a 'User Story'?",
+    "options": [
+      "A detailed technical specification",
+      "A formal contract for a feature",
+      "An informal, general explanation of a software feature written from the perspective of the end user",
+      "A bug report from a user"
+    ],
+    "answer": "An informal, general explanation of a software feature written from the perspective of the end user",
+    "explanation": "User stories typically follow the format: 'As a [type of user], I want [some goal] so that [some reason].' They are a tool to facilitate conversation about a requirement."
+  },
+  {
+    "question": "In Kanban, what is the primary purpose of a 'WIP Limit' (Work in Progress Limit)?",
+    "options": [
+      "To measure team velocity",
+      "To prevent overloading the team and improve the flow of work",
+      "To track the total number of tasks completed",
+      "To assign tasks to team members"
+    ],
+    "answer": "To prevent overloading the team and improve the flow of work",
+    "explanation": "By limiting the amount of work in any given stage of the workflow, WIP limits help to identify bottlenecks and encourage the team to focus on completing tasks before starting new ones."
+  },
+  {
+    "question": "What is the main purpose of the Sprint Retrospective in Scrum?",
+    "options": [
+      "To demonstrate the product increment to stakeholders",
+      "To plan the work for the next Sprint",
+      "To inspect the past Sprint with regard to people, relationships, process, and tools, and create a plan for improvements",
+      "To provide a status update to management"
+    ],
+    "answer": "To inspect the past Sprint with regard to people, relationships, process, and tools, and create a plan for improvements",
+    "explanation": "The Sprint Retrospective is an opportunity for the Scrum Team to inspect itself and create a plan for improvements to be enacted during the next Sprint."
+  },
+  {
+    "question": "Which of the four values of the Agile Manifesto is 'Responding to change over following a plan'?",
+    "options": ["First", "Second", "Third", "Fourth"],
+    "answer": "Fourth",
+    "explanation": "The fourth value of the Agile Manifesto emphasizes that while planning is valuable, the ability to respond to change is more valuable because requirements and environments are expected to evolve."
+  },
+  {
+    "question": "What does a 'burndown chart' visualize?",
+    "options": [
+      "The number of features added over time",
+      "The amount of work remaining in a Sprint or release over time",
+      "The team's happiness and morale",
+      "The project's budget"
+    ],
+    "answer": "The amount of work remaining in a Sprint or release over time",
+    "explanation": "A burndown chart is a graphical representation of work left to do versus time. The outstanding work (or backlog) is often on the vertical axis, with time along the horizontal."
+  },
+  {
+    "question": "In Extreme Programming (XP), what is 'Pair Programming'?",
+    "options": [
+      "Two developers reviewing each other's code",
+      "Two developers working together at one workstation",
+      "A developer working on two tasks at once",
+      "A system where every piece of code is written twice"
+    ],
+    "answer": "Two developers working together at one workstation",
+    "explanation": "In pair programming, one developer (the driver) writes code while the other (the navigator) observes, reviews, and provides feedback, leading to higher quality code and knowledge sharing."
+  },
+  {
+    "question": "Who is responsible for removing impediments to the Development Team's progress in Scrum?",
+    "options": [
+      "The Development Team",
+      "The Product Owner",
+      "A Manager",
+      "The Scrum Master"
+    ],
+    "answer": "The Scrum Master",
+    "explanation": "A key service the Scrum Master provides to the Development Team is removing impediments to their progress. This is part of their role as a servant-leader."
+  },
+  {
+    "question": "What is the 'Definition of Done' (DoD)?",
+    "options": [
+      "A list of tasks for the next Sprint",
+      "The Product Owner's acceptance of a story",
+      "A shared understanding of what it means for work to be complete and potentially releasable",
+      "The end of the project timeline"
+    ],
+    "answer": "A shared understanding of what it means for work to be complete and potentially releasable",
+    "explanation": "The DoD is a formal description of the state of the Increment when it meets the quality measures required for the product. It ensures everyone on the Scrum Team knows exactly what is expected of a completed piece of work."
+  },
+  {
+    "question": "Which of the following is NOT one of the 12 Principles behind the Agile Manifesto?",
+    "options": [
+      "'Our highest priority is to satisfy the customer.'",
+      "'Welcome changing requirements, even late in development.'",
+      "'Deliver working software frequently.'",
+      "'Comprehensive documentation is the primary measure of progress.'"
+    ],
+    "answer": "'Comprehensive documentation is the primary measure of progress.'",
+    "explanation": "The Agile Manifesto values 'Working software over comprehensive documentation.' The primary measure of progress is the delivery of functional software, not extensive documentation."
+  },
+  {
+    "question": "In Scrum, the Product Backlog is ordered by:",
+    "options": [
+      "The Development Team",
+      "The Scrum Master",
+      "Priority, value, and dependency, as determined by the Product Owner",
+      "Alphabetical order"
+    ],
+    "answer": "Priority, value, and dependency, as determined by the Product Owner",
+    "explanation": "The Product Owner is responsible for ordering the items in the Product Backlog to best achieve goals and missions. The Development Team can provide input, but the PO has the final say."
+  },
+  {
+    "question": "What is 'Velocity' in an Agile context?",
+    "options": [
+      "How fast an individual developer codes",
+      "The project's deadline",
+      "A measure of the amount of work a team can tackle during a single Sprint",
+      "The number of bugs found in a Sprint"
+    ],
+    "answer": "A measure of the amount of work a team can tackle during a single Sprint",
+    "explanation": "Velocity is calculated at the end of a Sprint by totaling the points of all fully completed user stories. It is used for forecasting and planning future Sprints."
+  },
+  {
+    "question": "The primary purpose of a Sprint Review is to:",
+    "options": [
+      "Critique the performance of the Development Team",
+      "Inspect the Increment and adapt the Product Backlog if needed",
+      "Plan the next Sprint's work",
+      "Obtain formal sign-off from the project sponsor"
+    ],
+    "answer": "Inspect the Increment and adapt the Product Backlog if needed",
+    "explanation": "During the Sprint Review, the Scrum Team and stakeholders collaborate about what was done in the Sprint. Based on that and any changes to the Product Backlog, attendees collaborate on the next things that could be done."
+  },
+  {
+    "question": "Kanban is a method for managing knowledge work with an emphasis on:",
+    "options": [
+      "Strict time-boxed iterations",
+      "Just-in-time delivery and visualizing workflow",
+      "Detailed upfront planning",
+      "Assigning roles and responsibilities"
+    ],
+    "answer": "Just-in-time delivery and visualizing workflow",
+    "explanation": "Kanban focuses on visualizing the workflow on a Kanban board, limiting work in progress (WIP), and managing the flow of work to deliver value continuously."
+  },
+  {
+    "question": "What is a 'Spike' in Agile development?",
+    "options": [
+      "A sudden increase in bugs",
+      "A type of user story that is dedicated to research, investigation, or prototyping",
+      "A meeting to resolve a technical conflict",
+      "A feature that is quickly developed"
+    ],
+    "answer": "A type of user story that is dedicated to research, investigation, or prototyping",
+    "explanation": "A spike is used to gain the knowledge necessary to reduce risk, understand a requirement, or increase the reliability of a story estimate. The output of a spike is knowledge, not a shippable product feature."
+  },
+  {
+    "question": "What does the acronym 'INVEST' stand for in the context of good user stories?",
+    "options": [
+      "Independent, Negotiable, Valuable, Estimable, Small, Testable",
+      "Innovative, Necessary, Viable, Executable, Simple, Traceable",
+      "Immediate, Non-ambiguous, Verifiable, Essential, Scalable, Trustworthy",
+      "Informal, Navigable, Valuable, Executable, Sized-appropriately, Testable"
+    ],
+    "answer": "Independent, Negotiable, Valuable, Estimable, Small, Testable",
+    "explanation": "The INVEST model provides a useful checklist for creating effective user stories that are ready for development."
+  },
+  {
+    "question": "In Lean-Agile principles, what is considered the most significant form of 'waste'?",
+    "options": ["Bugs", "Partially done work", "Meetings", "Documentation"],
+    "answer": "Partially done work",
+    "explanation": "Inspired by Lean manufacturing, partially done work (or inventory) is considered a major form of waste because it represents sunk cost with no delivered value and can hide quality problems."
+  },
+  {
+    "question": "What happens if the Development Team cannot complete all the work in its Sprint Backlog by the end of the Sprint?",
+    "options": [
+      "The Sprint is extended until all work is finished",
+      "The team works overtime to complete it",
+      "The incomplete items are moved back to the Product Backlog for re-evaluation and re-prioritization",
+      "The Sprint fails and the project is re-planned"
+    ],
+    "answer": "The incomplete items are moved back to the Product Backlog for re-evaluation and re-prioritization",
+    "explanation": "Only 'Done' items are demonstrated in the Sprint Review. Any unfinished work is returned to the Product Backlog, and the Product Owner decides what to do with it. This maintains transparency and a sustainable pace."
+  },
+  {
+    "question": "Which role is NOT part of a standard Scrum Team?",
+    "options": [
+      "Product Owner",
+      "Project Manager",
+      "Development Team",
+      "Scrum Master"
+    ],
+    "answer": "Project Manager",
+    "explanation": "Scrum Teams are self-organizing and cross-functional. The responsibilities traditionally held by a project manager are distributed among the three roles of the Scrum Team."
+  },
+  {
+    "question": "A 'burn-up' chart is different from a 'burndown' chart because it shows:",
+    "options": [
+      "Only the work remaining",
+      "The total scope of the project and the work completed to date",
+      "The number of team members available",
+      "The project budget spent"
+    ],
+    "answer": "The total scope of the project and the work completed to date",
+    "explanation": "A burn-up chart has two lines: one for the total work in scope, and one for the work completed. This makes it very effective at visualizing scope changes over time, something a burndown chart hides."
+  },
+  {
+    "question": "The concept of 'Sustainable Pace' is a principle from which Agile methodology?",
+    "options": ["Scrum", "Kanban", "Extreme Programming (XP)", "Crystal"],
+    "answer": "Extreme Programming (XP)",
+    "explanation": "One of the core principles of XP is that the team should not work excessive overtime. A sustainable pace ensures the team can maintain high quality and productivity indefinitely without burning out."
+  },
+  {
+    "question": "What is the primary output of a Sprint Planning meeting?",
+    "options": [
+      "The Sprint Goal and the Sprint Backlog",
+      "A detailed project plan for the entire release",
+      "The Definition of Done",
+      "A list of impediments"
+    ],
+    "answer": "The Sprint Goal and the Sprint Backlog",
+    "explanation": "The Sprint Planning event results in two key artifacts: a Sprint Goal that defines the objective of the Sprint, and a Sprint Backlog, which is the set of Product Backlog items selected for the Sprint plus a plan for delivering them."
+  },
+  {
+    "question": "Agile Estimation techniques like 'Planning Poker' use story points instead of hours to:",
+    "options": [
+      "Provide a precise timeline to management",
+      "Account for complexity, uncertainty, and effort, rather than just duration",
+      "Make estimating faster",
+      "Bill clients for work done"
+    ],
+    "answer": "Account for complexity, uncertainty, and effort, rather than just duration",
+    "explanation": "Story points are a relative measure of size. They abstract the estimate away from specific time commitments, acknowledging that the effort to complete a task involves more than just the hours it takes to code."
+  },
+  {
+    "question": "What does it mean for a team to be 'cross-functional'?",
+    "options": [
+      "The team members are from different departments",
+      "Each team member has a specialized role",
+      "The team as a whole has all the skills necessary to create a 'Done' product Increment",
+      "The team works on multiple projects at once"
+    ],
+    "answer": "The team as a whole has all the skills necessary to create a 'Done' product Increment",
+    "explanation": "A cross-functional team has all the competencies (e.g., development, testing, design, operations) needed to accomplish their work without depending on others not part of the team."
+  },
+  {
+    "question": "The 'Cone of Uncertainty' in software project management illustrates that:",
+    "options": [
+      "Projects are always late",
+      "Estimates become more accurate as the project progresses and more is known",
+      "The number of bugs increases over time",
+      "Team velocity is unpredictable"
+    ],
+    "answer": "Estimates become more accurate as the project progresses and more is known",
+    "explanation": "At the beginning of a project, very little is known, so estimates are highly uncertain. As the team builds, learns, and gets feedback, the uncertainty reduces, and estimates become more reliable."
+  },
+  {
+    "question": "What is the main idea behind 'Continuous Attention to Technical Excellence and Good Design' in the Agile Manifesto?",
+    "options": [
+      "The team must use the latest technology",
+      "Good design enhances agility and prevents technical debt from slowing the team down",
+      "The architecture must be fully designed upfront",
+      "Only senior developers should work on design"
+    ],
+    "answer": "Good design enhances agility and prevents technical debt from slowing the team down",
+    "explanation": "This principle highlights that focusing on technical quality is not a one-time activity but a continuous effort. A clean, well-designed codebase is easier and faster to change, which is the essence of agility."
+  },
+  {
+    "question": "In Kanban, what is the 'pull system'?",
+    "options": [
+      "The manager 'pulls' team members into meetings",
+      "Work is 'pulled' into the next stage of the workflow only when there is capacity to handle it",
+      "The product owner 'pulls' stories from the backlog",
+      "The team 'pulls' an all-nighter to meet a deadline"
+    ],
+    "answer": "Work is 'pulled' into the next stage of the workflow only when there is capacity to handle it",
+    "explanation": "A pull system is a core tenet of Lean and Kanban. Instead of work being 'pushed' onto the team, a team pulls work from the previous stage when they are ready, which helps manage flow and prevent bottlenecks."
+  },
+  {
+    "question": "What is an 'Information Radiator' in an Agile context?",
+    "options": [
+      "A server that sends email notifications",
+      "The person on the team who communicates status",
+      "A large, highly visible display of key team information, like a Kanban board or a burndown chart",
+      "A project management software tool"
+    ],
+    "answer": "A large, highly visible display of key team information, like a Kanban board or a burndown chart",
+    "explanation": "An information radiator is a physical or digital display posted in a place where the team and stakeholders can easily see it. It provides immediate, transparent information about the project's status without requiring someone to ask for it."
+  },
+  {
+    "question": "In the updated Scrum Guide, what is the 'Product Goal'?",
+    "options": [
+      "The goal for a single Sprint",
+      "A long-term objective for the Scrum Team to plan against",
+      "A list of all features to be built",
+      "The project's budget"
+    ],
+    "answer": "A long-term objective for the Scrum Team to plan against",
+    "explanation": "The Product Goal is a commitment for the Product Backlog. It provides context and a target for the Scrum Team to work towards, giving a purpose to each Sprint."
+  },
+  {
+    "question": "In Kanban and Lean-Agile, what does 'Cycle Time' measure?",
+    "options": [
+      "The total time from request to delivery",
+      "The time from when work starts on an item to when it is delivered",
+      "The time spent in meetings",
+      "The length of a Sprint"
+    ],
+    "answer": "The time from when work starts on an item to when it is delivered",
+    "explanation": "Cycle Time measures the duration from the moment work begins on an item (it moves from 'To Do' to 'In Progress') until it is ready for delivery. It's a key metric for measuring process efficiency."
+  },
+  {
+    "question": "What is the purpose of 'timeboxing' all Scrum events?",
+    "options": [
+      "To ensure everyone is paid for their time",
+      "To create a predictable rhythm and prevent waste in the form of endless discussions",
+      "To make sure meetings end by 5 PM",
+      "To give the Scrum Master control over the team"
+    ],
+    "answer": "To create a predictable rhythm and prevent waste in the form of endless discussions",
+    "explanation": "Every event in Scrum has a maximum duration (a timebox). This ensures an appropriate amount of time is spent on the event's purpose without allowing for waste, promoting focus and efficiency."
+  },
+  {
+    "question": "Which of the following is a popular framework for implementing Agile at a large enterprise scale?",
+    "options": [
+      "Waterfall",
+      "Scaled Agile Framework (SAFe)",
+      "Prince2",
+      "Extreme Programming (XP)"
+    ],
+    "answer": "Scaled Agile Framework (SAFe)",
+    "explanation": "SAFe is a set of organization and workflow patterns intended to guide enterprises in scaling lean and agile practices. Other scaling frameworks include LeSS (Large-Scale Scrum) and Nexus."
+  }
+]

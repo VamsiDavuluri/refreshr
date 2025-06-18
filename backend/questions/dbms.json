@@ -1,0 +1,142 @@
+[
+  {
+    "question": "Which ACID property ensures that once a transaction is committed, it will remain so, even in the event of a power loss?",
+    "options": ["Atomicity", "Consistency", "Isolation", "Durability"],
+    "answer": "Durability",
+    "explanation": "Durability guarantees that committed transactions are permanently saved. The DBMS ensures that these changes survive any subsequent system failure."
+  },
+  {
+    "question": "What is the purpose of the third normal form (3NF)?",
+    "options": [
+      "To eliminate repeating groups",
+      "To eliminate redundant data using functional dependencies",
+      "To eliminate transitive dependencies",
+      "To handle multi-valued dependencies"
+    ],
+    "answer": "To eliminate transitive dependencies",
+    "explanation": "3NF builds on 2NF by removing transitive dependencies, where a non-key attribute depends on another non-key attribute, further reducing data redundancy."
+  },
+  {
+    "question": "A 'foreign key' constraint is used to:",
+    "options": [
+      "Uniquely identify a record",
+      "Link two tables together",
+      "Index a column for faster queries",
+      "Define a default value"
+    ],
+    "answer": "Link two tables together",
+    "explanation": "A foreign key in one table points to a primary key in another table, enforcing referential integrity between them."
+  },
+  {
+    "question": "Boyce-Codd Normal Form (BCNF) is a stricter version of:",
+    "options": ["1NF", "2NF", "3NF", "4NF"],
+    "answer": "3NF",
+    "explanation": "BCNF is a higher level of normalization than 3NF. A table is in BCNF if for every non-trivial functional dependency X -> Y, X is a superkey."
+  },
+  {
+    "question": "The `TRUNCATE` statement in SQL is a:",
+    "options": ["DML statement", "DCL statement", "TCL statement", "DDL statement"],
+    "answer": "DDL statement",
+    "explanation": "TRUNCATE is a Data Definition Language (DDL) statement. Unlike DELETE (DML), it's faster, cannot be rolled back easily, and resets identity columns."
+  },
+  {
+    "question": "Which type of index is most effective for range queries (e.g., `WHERE age > 30`)?",
+    "options": ["Hash Index", "B-Tree Index", "Full-text Index", "Spatial Index"],
+    "answer": "B-Tree Index",
+    "explanation": "B-Tree indexes store data in a sorted order, which makes them highly efficient for retrieving a range of values."
+  },
+  {
+    "question": "What does a `LEFT JOIN` do?",
+    "options": [
+      "Returns all records from both tables",
+      "Returns only matching records",
+      "Returns all records from the left table and matched records from the right",
+      "Returns all records from the right table"
+    ],
+    "answer": "Returns all records from the left table and matched records from the right",
+    "explanation": "A LEFT JOIN returns every row from the left (first) table, and if a matching row is found in the right table, it returns those values; otherwise, it returns NULL."
+  },
+  {
+    "question": "In database concurrency, what is a 'dirty read'?",
+    "options": [
+      "Reading a value that has been modified but not yet committed",
+      "Reading the same data twice and getting different values",
+      "A transaction overwriting another uncommitted transaction's data",
+      "A transaction being rolled back"
+    ],
+    "answer": "Reading a value that has been modified but not yet committed",
+    "explanation": "A dirty read occurs when a transaction reads data that has been written by another transaction that has not yet been committed. This can lead to inconsistent data if the writing transaction rolls back."
+  },
+  {
+    "question": "What is the primary function of a database transaction log?",
+    "options": [
+      "To store user credentials",
+      "To record all database modifications for recovery purposes",
+      "To cache frequently accessed data",
+      "To store query execution plans"
+    ],
+    "answer": "To record all database modifications for recovery purposes",
+    "explanation": "The transaction log is a critical component for disaster recovery. It sequentially records all transactions and database modifications, allowing the DBMS to roll forward or roll back changes."
+  },
+  {
+    "question": "Which SQL command is used to remove a user's access rights to a database object?",
+    "options": ["GRANT", "REMOVE", "REVOKE", "DELETE"],
+    "answer": "REVOKE",
+    "explanation": "The REVOKE command is used in SQL's Data Control Language (DCL) to take away previously granted permissions from a user or role."
+  },
+  {
+    "question": "What is a 'materialized view'?",
+    "options": [
+      "A temporary table",
+      "A stored query result that is physically stored and periodically updated",
+      "A synonym for another table",
+      "A view that cannot be updated"
+    ],
+    "answer": "A stored query result that is physically stored and periodically updated",
+    "explanation": "Unlike a standard view, which is just a stored query, a materialized view stores the result set physically. This can improve query performance but requires storage and a refresh strategy."
+  },
+  {
+    "question": "The CAP theorem in distributed databases refers to which three properties?",
+    "options": [
+      "Consistency, Atomicity, Performance",
+      "Consistency, Availability, Partition Tolerance",
+      "Concurrency, Availability, Performance",
+      "Consistency, Atomicity, Partition Tolerance"
+    ],
+    "answer": "Consistency, Availability, Partition Tolerance",
+    "explanation": "The CAP theorem states that a distributed data store can only provide two of the following three guarantees: Consistency, Availability, and Partition Tolerance."
+  },
+  {
+    "question": "What is database 'sharding'?",
+    "options": [
+      "Encrypting the database",
+      "Creating a backup of the database",
+      "Horizontally partitioning data across multiple servers",
+      "Vertically partitioning data within a single server"
+    ],
+    "answer": "Horizontally partitioning data across multiple servers",
+    "explanation": "Sharding is a database architecture pattern where rows of a table are split across multiple database instances (shards) to improve scalability and performance."
+  },
+  {
+    "question": "The SQL `COALESCE` function is used to:",
+    "options": [
+      "Concatenate strings",
+      "Return the first non-NULL value in a list",
+      "Calculate the average of a set of values",
+      "Convert a value to a different data type"
+    ],
+    "answer": "Return the first non-NULL value in a list",
+    "explanation": "COALESCE evaluates its arguments in order and returns the current value of the first expression that does not evaluate to NULL."
+  },
+  {
+    "question": "What is an 'execution plan' in a SQL database?",
+    "options": [
+      "A schedule for database backups",
+      "A sequence of steps used to access data for a SQL query",
+      "A list of user permissions",
+      "The source code of a stored procedure"
+    ],
+    "answer": "A sequence of steps used to access data for a SQL query",
+    "explanation": "When a SQL query is submitted, the database's query optimizer generates an execution plan, which is the most efficient method it determines to retrieve the requested data (e.g., which indexes to use, how to join tables)."
+  }
+]

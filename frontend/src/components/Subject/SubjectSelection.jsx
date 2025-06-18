@@ -2,13 +2,13 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./SubjectSelection.css";
+import validSubjects from "../../constants/validSubjects";
 
-// Add the two new subjects to this array
 const subjects = [
   { name: "Data Structures and Algorithms", icon: "</>", path: "/quiz/dsa" },
-  { name: "Database Management Systems", icon: "🗄️", path: "/quiz/dbms" },
+  { name: "Database Management Systems", icon: "🗄", path: "/quiz/dbms" },
   { name: "Computer Networks", icon: "🌐", path: "/quiz/networks" },
-  { name: "Operating Systems", icon: "⚙️", path: "/quiz/os" },
+  { name: "Operating Systems", icon: "⚙", path: "/quiz/os" },
   { name: "Software Development", icon: "💻", path: "/quiz/dev" },
   { name: "Agile Software Development", icon: "🔄", path: "/quiz/agile" },
 ];
@@ -22,7 +22,12 @@ const SubjectSelection = () => {
   const navigate = useNavigate();
 
   const handleStartQuiz = (path) => {
-    navigate(path);
+    const subject = path.split("/").pop();
+    if (validSubjects.includes(subject)) {
+      navigate(path);
+    } else {
+      alert("Invalid subject selected.");
+    }
   };
 
   return (
@@ -47,4 +52,4 @@ const SubjectSelection = () => {
   );
 };
 
-export default SubjectSelection;
+export default SubjectSelection

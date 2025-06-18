@@ -1,0 +1,222 @@
+[
+  {
+    "question": "What is the primary purpose of a system call in an Operating System?",
+    "options": [
+      "To allow user-level processes to request services from the kernel",
+      "To shut down the computer",
+      "To run a user's program",
+      "To manage files on the disk"
+    ],
+    "answer": "To allow user-level processes to request services from the kernel",
+    "explanation": "System calls provide the interface between a process and the OS. Since processes run in user mode and can't access hardware directly, they use system calls to ask the kernel (running in kernel mode) to perform privileged operations for them."
+  },
+  {
+    "question": "In memory management, what is 'thrashing'?",
+    "options": [
+      "A process rapidly reading from disk",
+      "A security attack on the kernel",
+      "Excessive paging activity, leading to low CPU utilization",
+      "A process that cannot be terminated"
+    ],
+    "answer": "Excessive paging activity, leading to low CPU utilization",
+    "explanation": "Thrashing occurs when a process doesn't have enough memory frames allocated. It constantly swaps pages between RAM and disk, spending more time on paging than on actual execution, which severely degrades system performance."
+  },
+  {
+    "question": "The Banker's algorithm is used for which of the following?",
+    "options": [
+      "Deadlock Prevention",
+      "Deadlock Detection",
+      "Deadlock Avoidance",
+      "Process Scheduling"
+    ],
+    "answer": "Deadlock Avoidance",
+    "explanation": "The Banker's algorithm is a resource allocation and deadlock avoidance algorithm. It checks if granting a resource request would lead to a 'safe state'. If not, the request is denied until it becomes safe to grant."
+  },
+  {
+    "question": "What is the difference between a mutex and a semaphore?",
+    "options": [
+      "There is no difference",
+      "A mutex can be acquired by only one thread at a time, while a semaphore can be acquired by multiple threads",
+      "A semaphore is used for signaling, while a mutex is for locking",
+      "A mutex is faster than a semaphore"
+    ],
+    "answer": "A mutex can be acquired by only one thread at a time, while a semaphore can be acquired by multiple threads",
+    "explanation": "A mutex is a locking mechanism for mutual exclusion (one thread in a critical section). A counting semaphore maintains a count of available resources and can allow a specified number of threads to access a resource concurrently."
+  },
+  {
+    "question": "What is a 'zombie process'?",
+    "options": [
+      "A process that has been hacked",
+      "A process that cannot be killed",
+      "A process that has completed execution but still has an entry in the process table",
+      "A process running in the background"
+    ],
+    "answer": "A process that has completed execution but still has an entry in the process table",
+    "explanation": "When a child process terminates, its entry remains in the process table until the parent process reads its exit status. This terminated process is called a zombie."
+  },
+  {
+    "question": "Which process scheduling algorithm can lead to starvation for low-priority processes?",
+    "options": [
+      "First-Come, First-Served (FCFS)",
+      "Shortest Job First (SJF)",
+      "Round Robin",
+      "Priority Scheduling"
+    ],
+    "answer": "Priority Scheduling",
+    "explanation": "In a simple priority scheduling system, a continuous stream of high-priority processes can prevent low-priority processes from ever getting CPU time, a condition known as starvation."
+  },
+  {
+    "question": "What is the function of an Inode in a Unix-like file system?",
+    "options": [
+      "It stores the file's name",
+      "It stores metadata about a file, such as its size, owner, and pointers to its data blocks",
+      "It is the first data block of a file",
+      "It tracks which user is logged in"
+    ],
+    "answer": "It stores metadata about a file, such as its size, owner, and pointers to its data blocks",
+    "explanation": "An inode (index node) is a data structure that stores all information about a file object except for its name and its actual data. The name is stored in a directory entry, which points to the inode."
+  },
+  {
+    "question": "What is 'Copy-on-Write' (COW)?",
+    "options": [
+      "A file backup mechanism",
+      "A method for printing documents",
+      "An optimization strategy where a shared resource is duplicated only when it's about to be modified",
+      "A version control system"
+    ],
+    "answer": "An optimization strategy where a shared resource is duplicated only when it's about to be modified",
+    "explanation": "COW is used in memory management, particularly in the `fork()` system call. It allows the parent and child processes to initially share the same memory pages. A page is only copied when one of the processes tries to write to it."
+  },
+  {
+    "question": "A 'race condition' occurs when:",
+    "options": [
+      "Two processes are competing for the CPU at the same time",
+      "The behavior of a system depends on the unpredictable sequence or timing of other events",
+      "A process runs faster than the I/O device",
+      "The operating system runs out of memory"
+    ],
+    "answer": "The behavior of a system depends on the unpredictable sequence or timing of other events",
+    "explanation": "A race condition is a flaw in a concurrent system where the outcome of an operation depends on the non-deterministic timing of threads or processes. It often leads to corrupted data."
+  },
+  {
+    "question": "In the context of CPU scheduling, what is a 'context switch'?",
+    "options": [
+      "Changing the CPU's clock speed",
+      "The process of storing the state of a process so that it can be restored and resume execution later",
+      "Switching from user mode to kernel mode",
+      "A hardware interrupt"
+    ],
+    "answer": "The process of storing the state of a process so that it can be restored and resume execution later",
+    "explanation": "A context switch is the kernel performing a switch from one process to another. This involves saving the CPU registers and memory state of the current process and loading the state of the new process. It is computationally intensive overhead."
+  },
+  {
+    "question": "What is the main advantage of a microkernel architecture over a monolithic kernel?",
+    "options": [
+      "It is faster",
+      "It is more secure and reliable",
+      "It uses less memory",
+      "It has more built-in device drivers"
+    ],
+    "answer": "It is more secure and reliable",
+    "explanation": "In a microkernel, only the most fundamental services (like IPC and memory management) run in kernel mode. Other services (like device drivers and file systems) run as user-space processes. A failure in a user-space service won't crash the entire OS, improving reliability."
+  },
+  {
+    "question": "What is 'internal fragmentation' in memory management?",
+    "options": [
+      "Unused memory that is outside of any allocated block",
+      "Unused memory within an allocated memory block",
+      "The total amount of free memory",
+      "A security flaw in the memory allocator"
+    ],
+    "answer": "Unused memory within an allocated memory block",
+    "explanation": "Internal fragmentation occurs when a memory block allocated to a process is larger than the requested memory. The unused space within that allocated block is wasted."
+  },
+  {
+    "question": "Which of these is a preemptive scheduling algorithm?",
+    "options": [
+      "First-Come, First-Served (FCFS)",
+      "Shortest-Job-Next (SJN)",
+      "Shortest Remaining Time First (SRTF)",
+      "Cooperative Scheduling"
+    ],
+    "answer": "Shortest Remaining Time First (SRTF)",
+    "explanation": "SRTF is the preemptive version of SJN. If a new process arrives with a CPU burst length less than the remaining time of the current executing process, the scheduler preempts the current process and runs the new one."
+  },
+  {
+    "question": "What is a 'page fault'?",
+    "options": [
+      "An error in a web page's code",
+      "A hardware error in a memory module",
+      "An exception raised when a process tries to access a memory page that is not currently in RAM",
+      "A system crash caused by low memory"
+    ],
+    "answer": "An exception raised when a process tries to access a memory page that is not currently in RAM",
+    "explanation": "A page fault is not necessarily an error. It's an interrupt that tells the OS it needs to find the required page on the disk, load it into a free frame in RAM, and update the process's page table before resuming the process."
+  },
+  {
+    "question": "A 'journaling file system' (like ext4 or NTFS) improves reliability by:",
+    "options": [
+      "Encrypting all data on the disk",
+      "Compressing files to save space",
+      "Keeping a log of changes that have not yet been fully committed to the main file system",
+      "Storing files in a database"
+    ],
+    "answer": "Keeping a log of changes that have not yet been fully committed to the main file system",
+    "explanation": "A journaling file system maintains a 'journal' or log of the changes it intends to make. In case of a system crash, it can replay this log to bring the file system back to a consistent state, preventing data corruption."
+  },
+  {
+    "question": "What is a 'TLB' (Translation Lookaside Buffer)?",
+    "options": [
+      "A log buffer for transactions",
+      "A type of CPU cache used to speed up virtual-to-physical address translation",
+      "A buffer for network packets",
+      "A list of blocked processes"
+    ],
+    "answer": "A type of CPU cache used to speed up virtual-to-physical address translation",
+    "explanation": "The TLB is a small, fast hardware cache that stores recent virtual-to-physical address translations. A TLB hit avoids the need to query the page table in main memory, which is much slower, thus accelerating memory access."
+  },
+  {
+    "question": "The `fork()` system call in Unix-like systems is used to:",
+    "options": [
+      "Terminate a process",
+      "Wait for a process to finish",
+      "Execute a new program",
+      "Create a new process (a child process)"
+    ],
+    "answer": "Create a new process (a child process)",
+    "explanation": "`fork()` creates a new process that is a near-exact copy of the parent process. The new process (child) gets its own process ID but shares the parent's code, data, and open files initially (often using Copy-on-Write)."
+  },
+  {
+    "question": "In the context of I/O management, what is Direct Memory Access (DMA)?",
+    "options": [
+      "A method for the CPU to directly access I/O devices",
+      "A security feature preventing direct memory access",
+      "A feature allowing I/O devices to transfer data directly to/from main memory without CPU intervention",
+      "A technique for memory-mapped files"
+    ],
+    "answer": "A feature allowing I/O devices to transfer data directly to/from main memory without CPU intervention",
+    "explanation": "DMA offloads the task of data transfer from the CPU. The CPU initiates the transfer, but the DMA controller manages it, freeing up the CPU to perform other tasks and significantly improving system performance for large data transfers."
+  },
+  {
+    "question": "What is 'external fragmentation'?",
+    "options": [
+      "Wasted space within an allocated memory block",
+      "Wasted space between allocated memory blocks",
+      "A process that has fragmented into multiple threads",
+      "Data corruption on an external storage device"
+    ],
+    "answer": "Wasted space between allocated memory blocks",
+    "explanation": "External fragmentation occurs when free memory is broken into small, non-contiguous blocks. Even if the total free memory is sufficient for a new process, it cannot be allocated because no single block is large enough."
+  },
+  {
+    "question": "What is a 'daemon' process in a Unix-like system?",
+    "options": [
+      "A process started by a user",
+      "A background process that is not under the direct control of an interactive user",
+      "An alternative name for a zombie process",
+      "A process with the highest priority"
+    ],
+    "answer": "A background process that is not under the direct control of an interactive user",
+    "explanation": "Daemons are background processes that perform specific tasks, such as handling network requests (httpd) or scheduling jobs (cron). They are typically started at boot time and run continuously."
+  }
+]

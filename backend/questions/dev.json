@@ -1,0 +1,356 @@
+[
+  {
+    "question": "What does the 'S' in SOLID principles stand for?",
+    "options": [
+      "Single Responsibility Principle",
+      "Software Design Principle",
+      "Simple Design Pattern",
+      "Standard Object Language"
+    ],
+    "answer": "Single Responsibility Principle",
+    "explanation": "The Single Responsibility Principle states that a class should have only one reason to change, meaning it should have only one job or responsibility."
+  },
+  {
+    "question": "Which design pattern ensures a class only has one instance and provides a global point of access to it?",
+    "options": ["Factory", "Observer", "Singleton", "Facade"],
+    "answer": "Singleton",
+    "explanation": "The Singleton pattern is a creational pattern that restricts the instantiation of a class to one single instance, which is useful for managing shared resources like database connections or loggers."
+  },
+  {
+    "question": "In version control with Git, what is the primary purpose of `git rebase`?",
+    "options": [
+      "To merge two branches together creating a merge commit",
+      "To temporarily store uncommitted changes",
+      "To rewrite a branch's history by moving its base to a new commit",
+      "To delete a branch"
+    ],
+    "answer": "To rewrite a branch's history by moving its base to a new commit",
+    "explanation": "`git rebase` is used to integrate changes from one branch onto another by replaying the commits from the source branch on top of the target branch, resulting in a linear history."
+  },
+  {
+    "question": "What is the core cycle of Test-Driven Development (TDD)?",
+    "options": [
+      "Design-Code-Test",
+      "Red-Green-Refactor",
+      "Code-Test-Deploy",
+      "Plan-Do-Check-Act"
+    ],
+    "answer": "Red-Green-Refactor",
+    "explanation": "The TDD cycle involves: 1. Red: Writing a failing test for a new feature. 2. Green: Writing the minimal amount of code to make the test pass. 3. Refactor: Cleaning up the code while ensuring all tests still pass."
+  },
+  {
+    "question": "Which architectural style contrasts with a Monolithic architecture by breaking down an application into smaller, independent services?",
+    "options": [
+      "Layered Architecture",
+      "Client-Server Architecture",
+      "Microservices Architecture",
+      "Event-Driven Architecture"
+    ],
+    "answer": "Microservices Architecture",
+    "explanation": "Microservices is an architectural style that structures an application as a collection of loosely coupled, independently deployable services, each responsible for a specific business capability."
+  },
+  {
+    "question": "The 'L' in SOLID, the Liskov Substitution Principle, states that:",
+    "options": [
+      "Objects of a superclass should be replaceable with objects of a subclass without affecting correctness",
+      "Code should be open for extension but closed for modification",
+      "Large interfaces should be split into smaller ones",
+      "High-level modules should not depend on low-level modules"
+    ],
+    "answer": "Objects of a superclass should be replaceable with objects of a subclass without affecting correctness",
+    "explanation": "This principle ensures that a subclass can stand in for its superclass without causing errors, which is fundamental to building reliable object-oriented systems."
+  },
+  {
+    "question": "What is the main advantage of Continuous Integration (CI)?",
+    "options": [
+      "It deploys code directly to production",
+      "It automates the testing of every code change",
+      "It reduces the frequency of code merges, making them larger and more manageable",
+      "It allows developers to detect and fix integration issues early and frequently"
+    ],
+    "answer": "It allows developers to detect and fix integration issues early and frequently",
+    "explanation": "By automatically building and testing every commit, CI helps teams identify integration problems as soon as they are introduced, preventing them from escalating."
+  },
+  {
+    "question": "The Factory Method design pattern is primarily used to:",
+    "options": [
+      "Create a single instance of an object",
+      "Define an interface for creating an object, but let subclasses decide which class to instantiate",
+      "Attach additional responsibilities to an object dynamically",
+      "Provide a simplified interface to a complex subsystem"
+    ],
+    "answer": "Define an interface for creating an object, but let subclasses decide which class to instantiate",
+    "explanation": "The Factory Method is a creational pattern that provides a way to delegate the instantiation logic to child classes, promoting loose coupling."
+  },
+  {
+    "question": "What is 'Code Refactoring'?",
+    "options": [
+      "Rewriting code from scratch",
+      "Adding new features to existing code",
+      "The process of restructuring existing computer code without changing its external behavior",
+      "Debugging code to find errors"
+    ],
+    "answer": "The process of restructuring existing computer code without changing its external behavior",
+    "explanation": "Refactoring improves non-functional attributes of the software, such as readability, complexity, and maintainability, making it easier to build upon in the future."
+  },
+  {
+    "question": "In RESTful API design, which HTTP method is idempotent and used to completely replace a resource?",
+    "options": ["POST", "GET", "PUT", "PATCH"],
+    "answer": "PUT",
+    "explanation": "PUT is idempotent, meaning multiple identical requests have the same effect as a single request. It is used to replace an entire resource at a specific URI. PATCH, in contrast, is used for partial updates."
+  },
+  {
+    "question": "The Dependency Inversion Principle (the 'D' in SOLID) states that:",
+    "options": [
+      "Low-level modules should depend on high-level modules",
+      "High-level modules should not depend on low-level modules; both should depend on abstractions",
+      "Classes should only depend on their direct parent",
+      "Circular dependencies should be avoided"
+    ],
+    "answer": "High-level modules should not depend on low-level modules; both should depend on abstractions",
+    "explanation": "This principle decouples software modules by introducing an abstraction (like an interface) between them, making the system more flexible and easier to change."
+  },
+  {
+    "question": "What is the primary purpose of unit testing?",
+    "options": [
+      "To test the integration between multiple components",
+      "To verify that individual units of source code (e.g., functions, methods) work as designed",
+      "To test the application from an end-user's perspective",
+      "To test the performance of the system under load"
+    ],
+    "answer": "To verify that individual units of source code (e.g., functions, methods) work as designed",
+    "explanation": "Unit tests isolate the smallest testable parts of an application and validate their behavior independently from other parts."
+  },
+  {
+    "question": "Which Software Development Life Cycle (SDLC) model is characterized by a sequential design process, often compared to a cascading waterfall?",
+    "options": ["Agile", "Spiral", "Waterfall", "V-Model"],
+    "answer": "Waterfall",
+    "explanation": "The Waterfall model is a classic, linear model where each phase (Requirements, Design, Implementation, Testing, etc.) must be fully completed before moving on to the next."
+  },
+  {
+    "question": "What does 'DRY' stand for in software development?",
+    "options": [
+      "Don't Repeat Yourself",
+      "Don't Rush Your-code",
+      "Data Replication Yields-errors",
+      "Develop, Review, Yield"
+    ],
+    "answer": "Don't Repeat Yourself",
+    "explanation": "The DRY principle aims to reduce repetition of software patterns by replacing it with abstractions or using data normalization to avoid redundancy. 'Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.'"
+  },
+  {
+    "question": "The Observer design pattern is useful for:",
+    "options": [
+      "Creating objects without specifying their exact classes",
+      "Defining a one-to-many dependency between objects so that when one object changes state, all its dependents are notified",
+      "Wrapping an object to provide new functionality",
+      "Simplifying the interface of a complex system"
+    ],
+    "answer": "Defining a one-to-many dependency between objects so that when one object changes state, all its dependents are notified",
+    "explanation": "The Observer pattern is a behavioral pattern commonly used for implementing event-handling systems, where a 'subject' notifies multiple 'observers'."
+  },
+  {
+    "question": "What is the role of a 'linter' in the development process?",
+    "options": [
+      "To compile code into machine language",
+      "To automatically format code to a specific style guide",
+      "To statically analyze code to find programming errors, bugs, and stylistic errors",
+      "To run unit tests"
+    ],
+    "answer": "To statically analyze code to find programming errors, bugs, and stylistic errors",
+    "explanation": "A linter flags potential issues in code without actually executing it, helping developers maintain code quality and adhere to coding standards."
+  },
+  {
+    "question": "What does API stand for?",
+    "options": [
+      "Advanced Programming Interface",
+      "Application Programming Interface",
+      "Abstract Process Interaction",
+      "Application Protocol Integration"
+    ],
+    "answer": "Application Programming Interface",
+    "explanation": "An API is a set of definitions and protocols for building and integrating application software, defining the kinds of calls or requests that can be made, how to make them, the data formats that should be used, etc."
+  },
+  {
+    "question": "In `git`, what is the difference between `git fetch` and `git pull`?",
+    "options": [
+      "They are identical",
+      "`git fetch` downloads remote changes but does not merge them; `git pull` does both",
+      "`git pull` downloads remote changes; `git fetch` pushes local changes",
+      "`git fetch` is for branches, `git pull` is for tags"
+    ],
+    "answer": "`git fetch` downloads remote changes but does not merge them; `git pull` does both",
+    "explanation": "`git fetch` updates your remote-tracking branches, allowing you to see what others have done without impacting your local work. `git pull` is essentially a `git fetch` followed immediately by a `git merge`."
+  },
+  {
+    "question": "The term 'technical debt' refers to:",
+    "options": [
+      "The monetary cost of software licenses",
+      "The implied cost of rework caused by choosing an easy, limited solution now instead of using a better approach that would take longer",
+      "The time spent debugging code",
+      "Hardware depreciation"
+    ],
+    "answer": "The implied cost of rework caused by choosing an easy, limited solution now instead of using a better approach that would take longer",
+    "explanation": "Technical debt is a metaphor. Just like financial debt, it accrues 'interest' over time, making future changes more difficult and costly if the debt isn't 'repaid' by refactoring."
+  },
+  {
+    "question": "What is the primary goal of the Interface Segregation Principle (the 'I' in SOLID)?",
+    "options": [
+      "To ensure all interfaces are implemented correctly",
+      "To prevent classes from depending on methods they do not use",
+      "To make all interfaces as generic as possible",
+      "To combine multiple small interfaces into one large one"
+    ],
+    "answer": "To prevent classes from depending on methods they do not use",
+    "explanation": "This principle suggests that clients should not be forced to depend on interfaces they do not use. It favors creating many smaller, client-specific interfaces over one large, general-purpose interface."
+  },
+  {
+    "question": "The 'Decorator' design pattern is structurally similar to which other pattern, but differs in intent?",
+    "options": ["Adapter", "Proxy", "Composite", "Facade"],
+    "answer": "Proxy",
+    "explanation": "Both Decorator and Proxy have similar structures (they 'wrap' another object). However, Decorator adds responsibilities to an object, while Proxy controls access to it."
+  },
+  {
+    "question": "What is 'YAGNI' a principle of?",
+    "options": [
+      "You Always Get New Ideas",
+      "You Aren't Gonna Need It",
+      "Your Application's Growth is Non-negotiable",
+      "Yesterday's Awesome, Great, Now Innovate"
+    ],
+    "answer": "You Aren't Gonna Need It",
+    "explanation": "YAGNI is a principle from Extreme Programming (XP) that states a programmer should not add functionality until it is deemed necessary, preventing the development of features that aren't actually used."
+  },
+  {
+    "question": "What does it mean for a function to be a 'pure function'?",
+    "options": [
+      "It does not take any arguments",
+      "It only works with numbers",
+      "Its return value is the same for the same arguments and it has no side effects",
+      "It is written in a functional programming language"
+    ],
+    "answer": "Its return value is the same for the same arguments and it has no side effects",
+    "explanation": "Pure functions are predictable. Given the same input, they always return the same output and don't modify any state outside their own scope (like changing a global variable or writing to a file)."
+  },
+  {
+    "question": "In a CI/CD pipeline, what is the primary role of the Continuous Deployment (CD) stage?",
+    "options": [
+      "To run all unit tests",
+      "To build the application artifacts",
+      "To automatically deploy every change that passes the automated tests to production",
+      "To manually approve changes for release"
+    ],
+    "answer": "To automatically deploy every change that passes the automated tests to production",
+    "explanation": "Continuous Deployment is the final stage that automates the release of a successful build to the production environment, enabling very rapid release cycles."
+  },
+  {
+    "question": "The 'Builder' design pattern is most useful when:",
+    "options": [
+      "There is only one type of object to create",
+      "You need to create complex objects step by step",
+      "You need to copy an existing object",
+      "You need to control access to an object"
+    ],
+    "answer": "You need to create complex objects step by step",
+    "explanation": "The Builder pattern separates the construction of a complex object from its representation, so the same construction process can create different representations. It's ideal for objects with many configuration options."
+  },
+  {
+    "question": "What is 'semantic versioning' (SemVer)?",
+    "options": [
+      "A versioning scheme that uses dates (e.g., 2023.10.26)",
+      "A formal convention for assigning version numbers in the format MAJOR.MINOR.PATCH",
+      "A method for versioning database schemas",
+      "A proprietary versioning system"
+    ],
+    "answer": "A formal convention for assigning version numbers in the format MAJOR.MINOR.PATCH",
+    "explanation": "In SemVer 2.0.0, you increment the: 1. MAJOR version for incompatible API changes, 2. MINOR version for adding functionality in a backward-compatible manner, and 3. PATCH version for backward-compatible bug fixes."
+  },
+  {
+    "question": "The 'Open/Closed Principle' (the 'O' in SOLID) encourages developers to:",
+    "options": [
+      "Leave code open to everyone",
+      "Write software entities that are open for extension, but closed for modification",
+      "Close a module once it is tested",
+      "Keep all class members open (public)"
+    ],
+    "answer": "Write software entities that are open for extension, but closed for modification",
+    "explanation": "This means you should be able to add new functionality to a module without changing its existing source code, typically by using abstractions like interfaces and polymorphism."
+  },
+  {
+    "question": "What is the primary characteristic of a 'stateless' application or service?",
+    "options": [
+      "It cannot be run",
+      "It does not store any client session data on the server",
+      "It has no user interface",
+      "It runs on a single server"
+    ],
+    "answer": "It does not store any client session data on the server",
+    "explanation": "In a stateless architecture, each request from a client to the server must contain all the information needed to understand and complete the request. The server does not store any context about the client's session between requests."
+  },
+  {
+    "question": "Which of the following best describes 'dependency injection'?",
+    "options": [
+      "A module fetching its own dependencies",
+      "A design pattern in which an object receives other objects that it depends on, rather than creating them itself",
+      "The act of adding a new library to a project",
+      "A hardware-level process"
+    ],
+    "answer": "A design pattern in which an object receives other objects that it depends on, rather than creating them itself",
+    "explanation": "Dependency Injection is a form of Inversion of Control (IoC). It moves the responsibility of creating dependencies out of the class itself, leading to more modular, testable, and maintainable code."
+  },
+  {
+    "question": "In the Scrum framework, what is the main purpose of a 'Sprint Retrospective'?",
+    "options": [
+      "To plan the work for the next sprint",
+      "To demonstrate the work completed during the sprint to stakeholders",
+      "To inspect the past sprint and identify ways to improve",
+      "To refine the product backlog"
+    ],
+    "answer": "To inspect the past sprint and identify ways to improve",
+    "explanation": "The Sprint Retrospective is a meeting held at the end of a sprint for the Scrum Team to reflect on its process and create a plan for improvements to be enacted during the next sprint."
+  },
+  {
+    "question": "The 'Strategy' design pattern is best used when:",
+    "options": [
+      "An object needs to represent a part-whole hierarchy",
+      "You want to let a family of algorithms be interchangeable",
+      "You need to ensure only one instance of a class exists",
+      "You need to add behavior to an object dynamically"
+    ],
+    "answer": "You want to let a family of algorithms be interchangeable",
+    "explanation": "The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it."
+  },
+  {
+    "question": "What is a primary advantage of GraphQL over a traditional REST API?",
+    "options": [
+      "It is inherently more secure",
+      "It uses the HTTP protocol more efficiently",
+      "It allows clients to request exactly the data they need, preventing over-fetching",
+      "It is only suitable for graph databases"
+    ],
+    "answer": "It allows clients to request exactly the data they need, preventing over-fetching",
+    "explanation": "With GraphQL, the client specifies the structure of the data it requires, and the server returns exactly that structure. This solves the common REST issues of over-fetching (getting more data than needed) and under-fetching (needing to make multiple API calls)."
+  },
+  {
+    "question": "The 'code smell' known as 'Shotgun Surgery' refers to a situation where:",
+    "options": [
+      "A single class is trying to do too many things",
+      "A method has a very long list of parameters",
+      "Making one small change requires you to modify many different classes",
+      "A piece of code is duplicated across the codebase"
+    ],
+    "answer": "Making one small change requires you to modify many different classes",
+    "explanation": "Shotgun Surgery is a code smell where a single change in responsibility leads to a cascade of small changes in many other classes. It's an indicator of high coupling and poor distribution of responsibilities."
+  },
+  {
+    "question": "What is a key benefit of using containerization technology like Docker?",
+    "options": [
+      "It runs applications faster than on bare metal",
+      "It provides full hardware virtualization like a VM",
+      "It packages an application with all its dependencies into a standardized unit for software development",
+      "It automatically writes unit tests for the application"
+    ],
+    "answer": "It packages an application with all its dependencies into a standardized unit for software development",
+    "explanation": "Containers wrap up an application's code, libraries, and dependencies into an isolated 'box'. This ensures the application runs consistently across different computing environments, from a developer's laptop to a production server."
+  }
+]

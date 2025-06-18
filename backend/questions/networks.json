@@ -1,0 +1,202 @@
+[
+  {
+    "question": "In the TCP header, what is the purpose of the 'Window Size' field?",
+    "options": [
+      "To indicate the protocol version",
+      "To specify the number of bytes the receiver is currently willing to accept",
+      "To set the packet's time-to-live",
+      "To ensure packet ordering"
+    ],
+    "answer": "To specify the number of bytes the receiver is currently willing to accept",
+    "explanation": "The Window Size field is fundamental to TCP's flow control mechanism. It tells the sender how much data it can transmit before receiving an acknowledgment."
+  },
+  {
+    "question": "Which routing protocol uses a link-state algorithm?",
+    "options": ["BGP", "RIP", "OSPF", "EIGRP"],
+    "answer": "OSPF",
+    "explanation": "Open Shortest Path First (OSPF) is a link-state routing protocol. Each router constructs a map of the connectivity to the network, and computes the best path to each destination."
+  },
+  {
+    "question": "What is the primary function of the Border Gateway Protocol (BGP)?",
+    "options": [
+      "Routing within a single autonomous system",
+      "Exchanging routing information between autonomous systems on the internet",
+      "Resolving domain names to IP addresses",
+      "Assigning IP addresses to devices"
+    ],
+    "answer": "Exchanging routing information between autonomous systems on the internet",
+    "explanation": "BGP is the core routing protocol of the Internet. It's an exterior gateway protocol used to make routing decisions between different networks (autonomous systems)."
+  },
+  {
+    "question": "In the context of the OSI model, at which layer does encryption (like TLS/SSL) primarily occur?",
+    "options": [
+      "Layer 2 (Data Link)",
+      "Layer 4 (Transport)",
+      "Layer 6 (Presentation)",
+      "Layer 7 (Application)"
+    ],
+    "answer": "Layer 6 (Presentation)",
+    "explanation": "The Presentation Layer is responsible for data translation, compression, and encryption/decryption. While TLS operates as a 'shim' between Transport and Application, its functions align with the Presentation Layer's responsibilities."
+  },
+  {
+    "question": "What is a 'NAT Traversal' problem?",
+    "options": [
+      "The inability of a router to forward packets",
+      "The difficulty for two devices behind different NATs to communicate directly",
+      "A network loop caused by incorrect routing",
+      "A security vulnerability in firewalls"
+    ],
+    "answer": "The difficulty for two devices behind different NATs to communicate directly",
+    "explanation": "Network Address Translation (NAT) hides private IP addresses. NAT traversal techniques (like STUN/TURN) are needed to establish peer-to-peer connections when both peers are behind NAT devices."
+  },
+  {
+    "question": "Which IPv6 address is the equivalent of the IPv4 loopback address 127.0.0.1?",
+    "options": ["FF02::1", "2001::", "FE80::", "::1"],
+    "answer": "::1",
+    "explanation": "The address 0:0:0:0:0:0:0:1, which is compressed to `::1`, is the loopback address in IPv6, used by a host to send a packet to itself."
+  },
+  {
+    "question": "The Address Resolution Protocol (ARP) is used to map:",
+    "options": [
+      "A domain name to an IP address",
+      "A port number to a process",
+      "A Layer 3 (IP) address to a Layer 2 (MAC) address",
+      "A MAC address to a VLAN ID"
+    ],
+    "answer": "A Layer 3 (IP) address to a Layer 2 (MAC) address",
+    "explanation": "When a device needs to send a packet to another device on the same local network, it uses ARP to find the destination's hardware (MAC) address from its known IP address."
+  },
+  {
+    "question": "What is the key difference between TCP and UDP?",
+    "options": [
+      "TCP is faster than UDP",
+      "UDP provides error correction",
+      "TCP is connection-oriented, while UDP is connectionless",
+      "UDP is used for web browsing"
+    ],
+    "answer": "TCP is connection-oriented, while UDP is connectionless",
+    "explanation": "TCP establishes a reliable connection, guaranteeing packet delivery, ordering, and error-checking. UDP is a 'fire-and-forget' protocol that offers speed at the expense of guaranteed delivery."
+  },
+  {
+    "question": "What is a 'subnet mask' used for?",
+    "options": [
+      "To hide a network's IP address",
+      "To divide an IP address into a network portion and a host portion",
+      "To encrypt network traffic",
+      "To identify the default gateway"
+    ],
+    "answer": "To divide an IP address into a network portion and a host portion",
+    "explanation": "A subnet mask is a 32-bit number that separates an IP address into its two main components: the network address, which identifies the network, and the host address, which identifies the specific device on that network."
+  },
+  {
+    "question": "A DNS 'MX' record is used for what purpose?",
+    "options": [
+      "Mapping a domain to an IPv4 address",
+      "Specifying the mail server responsible for a domain",
+      "Providing canonical name aliases",
+      "Storing arbitrary text data"
+    ],
+    "answer": "Specifying the mail server responsible for a domain",
+    "explanation": "Mail Exchanger (MX) records are critical for email delivery. They direct email sent to a domain to the correct mail servers that are authorized to accept messages for that domain."
+  },
+  {
+    "question": "What does 'Quality of Service' (QoS) refer to in networking?",
+    "options": [
+      "The speed of the internet connection",
+      "The security level of a network",
+      "Mechanisms to manage network resources and prioritize traffic",
+      "The physical durability of network cables"
+    ],
+    "answer": "Mechanisms to manage network resources and prioritize traffic",
+    "explanation": "QoS is a set of technologies that work on a network to manage its resources. It ensures that critical traffic (like video conferencing or VoIP) gets priority over less important traffic (like file downloads)."
+  },
+  {
+    "question": "Which of the following is a characteristic of a 'worm'?",
+    "options": [
+      "It requires a host program to spread",
+      "It is a self-replicating program that spreads across networks",
+      "It only steals data without causing harm",
+      "It can only be spread via email"
+    ],
+    "answer": "It is a self-replicating program that spreads across networks",
+    "explanation": "Unlike a virus, which attaches itself to an existing program, a worm is a standalone malware that replicates itself to spread to other computers, often exploiting network vulnerabilities."
+  },
+  {
+    "question": "The 'time-to-live' (TTL) field in an IP header is used to:",
+    "options": [
+      "Synchronize clocks between routers",
+      "Measure the round-trip time of a packet",
+      "Prevent packets from circulating indefinitely in a network",
+      "Indicate the priority of the packet"
+    ],
+    "answer": "Prevent packets from circulating indefinitely in a network",
+    "explanation": "TTL is an 8-bit field. Each router that forwards the packet decrements the TTL value by one. If the TTL value reaches zero, the packet is discarded, preventing it from getting stuck in routing loops forever."
+  },
+  {
+    "question": "What is the primary purpose of a VLAN?",
+    "options": [
+      "To increase the physical speed of a LAN",
+      "To segment a physical network into multiple logical networks",
+      "To provide wireless access to a network",
+      "To connect two different networks together"
+    ],
+    "answer": "To segment a physical network into multiple logical networks",
+    "explanation": "A Virtual LAN (VLAN) allows a network administrator to partition a single switched network, creating multiple distinct broadcast domains. This improves security and network management."
+  },
+  {
+    "question": "In the context of SSL/TLS, what is the role of the Certificate Authority (CA)?",
+    "options": [
+      "To encrypt the data being sent",
+      "To issue digital certificates and vouch for the identity of a website",
+      "To route the network traffic",
+      "To store a backup of the private key"
+    ],
+    "answer": "To issue digital certificates and vouch for the identity of a website",
+    "explanation": "A Certificate Authority is a trusted third party that signs and issues digital certificates. Browsers trust these CAs, and therefore trust the certificates they issue, which is fundamental to securing HTTPS connections."
+  },
+  {
+    "question": "What is the primary role of the Dynamic Host Configuration Protocol (DHCP)?",
+    "options": [
+      "Resolving domain names",
+      "Assigning IP addresses automatically",
+      "Routing traffic between networks",
+      "Encrypting web traffic"
+    ],
+    "answer": "Assigning IP addresses automatically",
+    "explanation": "DHCP automates the process of assigning IP addresses, subnet masks, default gateways, and DNS servers to devices on a network, simplifying network administration."
+  },
+  {
+    "question": "What are the three steps of the TCP three-way handshake, in order?",
+    "options": [
+      "SYN -> ACK -> SYN-ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> ACK"
+    ],
+    "answer": "SYN -> SYN-ACK -> ACK",
+    "explanation": "The client sends a SYN (synchronize) packet, the server responds with a SYN-ACK (synchronize-acknowledgment) packet, and the client completes the connection by sending an ACK (acknowledgment) packet."
+  },
+  {
+    "question": "A MAC address is a unique identifier assigned to a:",
+    "options": ["Router", "Network Interface Controller (NIC)", "IP address", "Subnet"],
+    "answer": "Network Interface Controller (NIC)",
+    "explanation": "A Media Access Control (MAC) address is a hardware address that uniquely identifies each device's network interface on a local network. It operates at the Data Link Layer (Layer 2)."
+  },
+  {
+    "question": "Which HTTP status code indicates that a resource has been permanently moved to a new location?",
+    "options": ["200 OK", "301 Moved Permanently", "404 Not Found", "500 Internal Server Error"],
+    "answer": "301 Moved Permanently",
+    "explanation": "A 301 redirect tells the client (e.g., a browser) and search engines that the requested resource has a new permanent URI and that they should update their links."
+  },
+  {
+    "question": "What is the main purpose of the Spanning Tree Protocol (STP) in a switched Ethernet network?",
+    "options": [
+      "To increase network speed",
+      "To encrypt data frames",
+      "To prevent Layer 2 loops",
+      "To assign IP addresses"
+    ],
+    "answer": "To prevent Layer 2 loops",
+    "explanation": "STP prevents broadcast storms and network instability by logically disabling redundant paths in a network with multiple switches, creating a loop-free logical topology."
+  }
+]

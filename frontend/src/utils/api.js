@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // Create a new instance of axios with a custom configuration
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api', // Base URL for all API requests
+  baseURL: 'http://localhost:3001/api', // Base URL for all API requests
 });
 
 // --- Request Interceptor ---
