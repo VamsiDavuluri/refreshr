@@ -21,7 +21,7 @@ const Register = () => {
   const onSubmit = async (data) => {
     try {
       // Send a POST request to the backend registration endpoint
-      const response = await axios.post('http://localhost:3001/api/register', data);
+      const response = await axios.post('http://localhost:3001/api/auth/register', data);
       
       // Show success message from the server and navigate to login
       alert(response.data.message);

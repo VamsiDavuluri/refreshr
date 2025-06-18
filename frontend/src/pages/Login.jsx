@@ -23,7 +23,7 @@ const Login = () => {
     setLoginError(''); // Clear previous errors
     try {
       // Send a POST request to the backend login endpoint
-      const response = await axios.post('http://localhost:3001/api/login', data);
+      const response = await axios.post('http://localhost:3001/api/auth/login', data);
       
       // On successful login, the backend sends a token.
       // We save this token to localStorage to keep the user logged in.
