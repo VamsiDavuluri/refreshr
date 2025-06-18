@@ -73,8 +73,9 @@ app.get('/api/my-results', authenticateToken, (req, res) => {
     }
 });
 
-
+// EXPORT THE EXPRESS APP INSTANCE
+module.exports = app;
 // --- Start the Server ---
-app.listen(PORT, () => {
-  console.log(`Backend server is running on http://localhost:${PORT}`);
-});
+//app.listen(PORT, () => {
+ // console.log(`Backend server is running on http://localhost:${PORT}`);
+//});
