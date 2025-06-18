@@ -1,0 +1,105 @@
+.results-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-primary);
+}
+
+.results-content {
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.results-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.summary-box {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  display: flex;
+  gap: 2.5rem;
+  font-size: 0.9rem;
+}
+
+.answers-list {
+  width: 100%;
+  max-width: 700px;
+}
+
+.question-card {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.question-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.question-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.label {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.correct {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.incorrect {
+  color: #e53935;
+  font-weight: 600;
+}
+
+.btn.return-btn {
+  background-color: #000;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn.return-btn:hover {
+  background-color: #222;
+}
+/* Add these styles to Results.css */
+
+.explanation-box {
+  background-color: var(--background-primary); /* A slightly darker background */
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  border: 1px solid #444; /* A subtle border */
+}
+
+.explanation-box p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

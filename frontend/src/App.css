@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --background-primary: #121212; /* The main dark background */
+  --background-secondary: #1A1A1A;
+  --background-tertiary: #1F1F1F;
+  --border-color: #333333;
+  --text-primary: #FFFFFF;
+  --text-secondary: #B3B3B3;
+  --text-tertiary: #808080;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  /* This is the key line that removes the gradient and sets the solid dark theme */
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

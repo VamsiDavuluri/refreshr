@@ -1,0 +1,20 @@
+# IDE and Editor folders
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+.env
+
+# Backend specifics
+backend/node_modules/
+backend/uploads/
+backend/.env
+backend/database.json
+
+# Frontend specifics
+frontend/node_modules/
+frontend/build/
+frontend/.env*

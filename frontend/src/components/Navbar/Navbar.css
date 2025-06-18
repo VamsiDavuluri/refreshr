@@ -1,0 +1,152 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* --- New Three-Column Layout Styles --- */
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  flex: 1; /* Each column takes up 1/3 of the space */
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left {
+  justify-content: flex-start; /* Aligns content to the left */
+}
+
+.navbar-center {
+  justify-content: center; /* Aligns content to the center */
+}
+
+.navbar-right {
+  justify-content: flex-end; /* Aligns content to the right */
+}
+/* --- End of New Layout Styles --- */
+
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--text-primary);
+}
+
+.navbar-actions {
+  position: relative; /* For dropdown positioning */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-icon-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-icon-btn:hover {
+  background-color: var(--background-tertiary);
+}
+
+.navbar-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 240px;
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdown-user-info {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-user-info span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.dropdown-user-info strong {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  word-break: break-all;
+}
+
+.dropdown-logout-btn {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.dropdown-logout-btn:hover {
+  background-color: var(--background-tertiary);
+}
+/* Add this to the end of src/components/Navbar.css */
+
+.dropdown-link {
+  display: block;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-top: 1px solid var(--border-color);
+}
+
+.dropdown-link:hover {
+  background-color: var(--background-tertiary);
+}
