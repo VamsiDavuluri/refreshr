@@ -62,6 +62,7 @@ app.post('/api/results', authenticateToken, (req, res) => {
 // GET /api/my-results
 app.get('/api/my-results', authenticateToken, (req, res) => {
     try {
+        console.log("Authenticated user ID:", req.user.id);
         const db = readDB();
         const userId = req.user.id;
         const userResults = db.quizResults
@@ -74,8 +75,8 @@ app.get('/api/my-results', authenticateToken, (req, res) => {
 });
 
 // EXPORT THE EXPRESS APP INSTANCE
-module.exports = app;
+//module.exports = app;
 // --- Start the Server ---
-//app.listen(PORT, () => {
- // console.log(`Backend server is running on http://localhost:${PORT}`);
-//});
+app.listen(PORT, () => {
+  console.log(`Backend server is running on http://localhost:${PORT}`);
+});
