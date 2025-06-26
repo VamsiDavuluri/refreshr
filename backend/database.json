@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "vdavulur2@gitam.in",
+      "password": "$2b$10$9HfzezojDIJJgeJ0w9fgKe9BckcWRADAStx5MBrKbRGN4Ibo43LRW"
+    },
+    {
+      "id": 2,
+      "email": "sathviksai002@gmail.com",
+      "password": "$2b$10$5KS1x0RJsxpi7ALH1nccaODpwhiE01NAh.R4VhY3OkDcO1iEL17F2"
+    }
+  ],
+  "quizResults": [
+    {
+      "resultId": 1,
+      "userId": 1,
+      "subject": "dsa",
+      "score": 6,
+      "total": 15,
+      "date": "2025-06-18T18:19:09.792Z"
+    },
+    {
+      "resultId": 2,
+      "userId": 1,
+      "subject": "dsa",
+      "score": 5,
+      "total": 15,
+      "date": "2025-06-25T17:42:40.666Z"
+    },
+    {
+      "resultId": 3,
+      "userId": 1,
+      "subject": "dsa",
+      "score": 3,
+      "total": 15,
+      "date": "2025-06-25T17:56:56.787Z"
+    }
+  ],
+  "generatedQuizzes": []
+}

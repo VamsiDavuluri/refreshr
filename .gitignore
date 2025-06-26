@@ -12,7 +12,6 @@ Thumbs.db
 backend/node_modules/
 backend/uploads/
 backend/.env
-backend/database.json
 
 # Frontend specifics
 frontend/node_modules/
