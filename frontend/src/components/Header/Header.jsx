@@ -6,22 +6,18 @@ const Header = () => {
    const navigate = useNavigate();
 
    return (
-    <header className="simple-header-container">
-      <Link to="/home" className="simple-header-logo">
-         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="26"
-          height="26"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#f59e0b"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          style={{ marginRight: "0.5rem" }}
-        >
-           <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-         </svg>
+    <header className="navbar-container">
+      <Link to="/home" className="navbar-logo">
+          <svg
+            className="steps-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M3 17h4v4H3v-4zm0-6h6v4H3v-4zm0-6h8v4H3V5zm10 0h8v2h-8V5zm0 6h6v2h-6v-2zm0 6h4v2h-4v-2z" />
+          </svg>
          <span>refreshr</span>
       </Link>
 

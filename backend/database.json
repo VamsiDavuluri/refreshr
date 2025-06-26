@@ -35,6 +35,14 @@
       "score": 3,
       "total": 15,
       "date": "2025-06-25T17:56:56.787Z"
+    },
+    {
+      "resultId": 4,
+      "userId": 1,
+      "subject": "dsa",
+      "score": 4,
+      "total": 15,
+      "date": "2025-06-26T18:10:44.466Z"
     }
   ],
   "generatedQuizzes": []
