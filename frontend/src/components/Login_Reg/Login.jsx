@@ -1,29 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useNavigate } from "react-router-dom"; // ✅ import it here
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const schema = yup.object().shape({
-  email: yup.string().email().required(),
-  password: yup.string().min(6).required(),
+  email: yup.string().email("Invalid email").required("Email is required"),
+  password: yup.string().min(6, "Minimum 6 characters").required("Password is required"),
 });
 
 const Login = () => {
-  const navigate = useNavigate(); // ✅ initialize here
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+  } = useForm({ resolver: yupResolver(schema) });
 
-  const onSubmit = (data) => {
-    // Simulate login and redirect to quiz
-    alert("Login successful!");
-    navigate("/select-subject");
+  const onSubmit = async (data) => {
+    setError("");
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/login`,
+        data
+      );
+
+      const { token } = response.data;
+      localStorage.setItem("token", token);
+      alert("Login successful!");
+      navigate("/home");
+    } catch (err) {
+      if (err.response?.data?.message) {
+        setError(err.response.data.message);
+      } else {
+        setError("Login failed. Please try again.");
+      }
+    }
   };
 
   return (
@@ -42,10 +57,11 @@ const Login = () => {
           {errors.password && <p className="error">{errors.password.message}</p>}
         </div>
 
+        {error && <p className="error">{error}</p>}
+
         <button type="submit" className="btn">Login</button>
       </form>
 
-      {/* ✅ Add this button to go to /results */}
       <button
         onClick={() => navigate("/results")}
         className="btn"

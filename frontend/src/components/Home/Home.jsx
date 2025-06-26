@@ -6,7 +6,6 @@ import "./Home.css";
 const navLinks = [
     { name: "Home", path: "/home" },
     { name: "Quizzes", path: "/subjects" },
-
 ];
 
 // src/components/Home.jsx

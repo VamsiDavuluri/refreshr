@@ -28,9 +28,7 @@ function App() {
         <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
         <Route path="/subjects" element={<ProtectedRoute><SubjectSelection /></ProtectedRoute>} />
         <Route path="/my-attempts" element={<ProtectedRoute><MyAttempts /></ProtectedRoute>} />
-        {/* REMOVED: The /create-quiz route is gone */}
         <Route path="/quiz/:subject" element={<ProtectedRoute><Quiz /></ProtectedRoute>} />
-        {/* Keep the custom route for later, or remove if you want it completely clean */}
         <Route path="/quiz/custom/:quizId" element={<ProtectedRoute><Quiz /></ProtectedRoute>} />
         <Route path="/results-summary" element={<ProtectedRoute><QuizSummary /></ProtectedRoute>} />
         <Route path="/results" element={<ProtectedRoute><Results /></ProtectedRoute>} />
