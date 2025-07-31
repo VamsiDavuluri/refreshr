@@ -6,7 +6,7 @@ import axios from 'axios';
 // The baseURL is the root address of your backend server.
 // This is the most important line to fix the error.
 const api = axios.create({
-  baseURL:  'http://localhost:5001',
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000',
 });
 
 // 2. Request Interceptor: This function runs BEFORE every API request is sent.
