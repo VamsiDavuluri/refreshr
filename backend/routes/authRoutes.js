@@ -46,7 +46,7 @@ router.post('/login', async (req, res) => {
         };
 
         // 2. Sign the new payload to create the token.
-        const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '8h' });
+        const token = jwt.sign({id: user.id, email: user.email}, JWT_SECRET, { expiresIn: '8h' });
         res.status(200).json({ token });
     } catch (error) {
         console.error("Login Error:", error);
