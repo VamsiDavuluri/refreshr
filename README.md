@@ -86,20 +86,3 @@ npm start
 
 ---
 
-## 📅 Roadmap
-
-### 🥇 Tier 1: Core Enhancements (Next Steps)
-- ✅ **Database Migration:** Upgrade the backend from a JSON file to a scalable **MongoDB Atlas** database for robust, production-ready data storage and to eliminate concurrency issues.
-- 🎨 **UI Skeletons & Loaders:** Add loading skeletons to the dashboard and quiz pages to improve the perceived performance and user experience while data is being fetched.
-- ⚙️ **Admin Dashboard:** Create a new protected area for an admin user to add, edit, or delete questions for the various quiz subjects.
-- 📊 **Advanced Analytics:** Provide users with a dashboard to visualize their performance, showing strengths and weaknesses by subject over time.
-
-### 🥈 Tier 2: Feature Expansion (Coming Soon)
-- 🏆 **Leaderboards:** Implement a global or subject-specific leaderboard to foster friendly competition.
-- 🔗 **Share Scores:** Allow users to share their quiz scores on social media.
-- 🔔 **Notifications:** An in-app notification system for updates or new features.
-
-### 🥉 Tier 3: Advanced Goals (Future Vision)
-- 🎨 **Theme Switching (Dark/Light):** Allow users to toggle between dark and light modes.
-- 🤝 **Teams & Collaboration:** Introduce a feature for users to form study groups and track group progress.
-- 🤖 **Re-introduce AI Quiz Generation:** Implement the PDF-to-quiz feature using a robust background job queue system to handle long-running AI processing tasks.
