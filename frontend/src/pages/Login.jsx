@@ -1,9 +1,10 @@
+// frontend/src/pages/Login.jsx
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate, Link } from "react-router-dom";
-import axios from 'axios'; // <-- Import axios
+import api from '../api';
 import './AuthForm.css';
 
 const schema = yup.object().shape({
@@ -18,25 +19,36 @@ const Login = () => {
     resolver: yupResolver(schema),
   });
 
-  // --- UPDATED ONSUBMIT FUNCTION ---
   const onSubmit = async (data) => {
-    setLoginError(''); // Clear previous errors
+    setLoginError('');
     try {
-      // Send a POST request to the backend login endpoint
-      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, data);
-      
-      // On successful login, the backend sends a token.
-      // We save this token to localStorage to keep the user logged in.
-      const { token } = response.data;
-      localStorage.setItem('token', token);
+      const response = await api.post('/api/auth/login', data);
 
-      // Navigate to the main homepage after successful login
-      navigate("/home");
+      // --- DEBUGGING AND FIX ---
+      console.log("Full response from backend:", response);
+      console.log("Response data object:", response.data);
+
+      // 1. Extract the token from the response data object.
+      const token = response.data.token;
+      
+      console.log("Extracted token:", token);
+
+      // 2. Check if the extracted token is a valid string.
+      if (token && typeof token === 'string' && token.length > 10) {
+        // 3. Save ONLY the token string to local storage.
+        localStorage.setItem('token', token);
+        console.log("Token saved to local storage. Navigating to home...");
+        navigate("/home");
+      } else {
+        // This will catch if the backend response is malformed.
+        console.error("Login failed: Backend did not return a valid token string.");
+        setLoginError("Login failed: Invalid response from server.");
+      }
 
     } catch (error) {
-      // If login fails, display the error message from the backend
+      console.error("An error occurred during login:", error);
       if (error.response && error.response.data) {
-        setLoginError(error.response.data.message); // e.g., "Invalid email or password."
+        setLoginError(error.response.data.message);
       } else {
         setLoginError("An error occurred. Please try again.");
       }
@@ -52,20 +64,15 @@ const Login = () => {
           <input type="email" {...register("email")} />
           {errors.email && <p className="error-message">{errors.email.message}</p>}
         </div>
-
         <div className="form-group">
           <label>Password</label>
           <input type="password" {...register("password")} />
           {errors.password && <p className="error-message">{errors.password.message}</p>}
         </div>
-
-        {/* Display login error message from the server on the form */}
         {loginError && <p className="error-message server-error">{loginError}</p>}
-
         <button type="submit" className="btn-submit">Login</button>
-
         <p className="redirect-link">
-          Don't have an an account? <Link to="/register">Sign Up</Link>
+          Don't have an account? <Link to="/register">Sign Up</Link>
         </p>
       </form>
     </div>

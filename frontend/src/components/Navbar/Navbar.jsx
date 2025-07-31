@@ -6,7 +6,7 @@ import './Navbar.css';
 const Navbar = ({ links = [] }) => {
   const navigate = useNavigate();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [userEmail, setUserEmail] = useState('');
+  const [userName, setUserName] = useState('');
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Navbar = ({ links = [] }) => {
     if (token) {
       try {
         const decodedToken = jwtDecode(token);
-        setUserEmail(decodedToken.email);
+        setUserName(decodedToken.name || decodedToken.email);
       } catch (error) {
         console.error("Invalid token:", error);
         handleLogout();
@@ -91,7 +91,7 @@ const Navbar = ({ links = [] }) => {
             <div className="profile-dropdown">
               <div className="dropdown-user-info">
                 <span>Signed in as</span>
-                <strong>{userEmail}</strong>
+                <strong>{userName}</strong>
               </div>
               <Link to="/my-attempts" className="dropdown-link">
                 My Attempts

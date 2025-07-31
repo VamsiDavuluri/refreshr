@@ -1,36 +1,23 @@
+// backend/routes/authRoutes.js
+
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const fs = require('fs');
-const path = require('path');
+const db = require('../db');
 const router = express.Router();
 
-// --- Constants ---
-const DB_PATH = path.join(__dirname, '..', 'database.json');
-const JWT_SECRET = process.env.JWT_SECRET || 'your-super-secret-key-that-is-long-and-random';
+const JWT_SECRET = process.env.JWT_SECRET;
 
-// Helper functions (could also be moved to a db.js helper file for even cleaner code)
-const readDB = () => JSON.parse(fs.readFileSync(DB_PATH, 'utf8'));
-const writeDB = (data) => fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2), 'utf8');
-
-// --- API ROUTES ---
-
-// Route: POST /api/auth/register
+// Path: POST /api/auth/register
 router.post('/register', async (req, res) => {
     try {
-        const { email, password } = req.body;
-        const db = readDB();
-        if (db.users.find(user => user.email === email)) {
+        const { name, email, password } = req.body;
+        const existingUser = await db.query('SELECT * FROM users WHERE email = $1', [email]);
+        if (existingUser.rows.length > 0) {
             return res.status(400).json({ message: 'User with this email already exists.' });
         }
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = {
-            id: (db.users.length > 0 ? Math.max(...db.users.map(u => u.id)) : 0) + 1,
-            email,
-            password: hashedPassword
-        };
-        db.users.push(newUser);
-        writeDB(db);
+        await db.query('INSERT INTO users (name, email, password) VALUES ($1, $2, $3)', [name, email, hashedPassword]);
         res.status(201).json({ message: 'User registered successfully!' });
     } catch (error) {
         console.error("Registration Error:", error);
@@ -38,21 +25,29 @@ router.post('/register', async (req, res) => {
     }
 });
 
-// Route: POST /api/auth/login
+// Path: POST /api/auth/login
 router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
-        const db = readDB();
-        const user = db.users.find(u => u.email === email);
+        const result = await db.query('SELECT * FROM users WHERE email = $1', [email]);
+        const user = result.rows[0];
         if (!user) {
-            return res.status(400).json({ message: 'Invalid email or password.' });
+            return res.status(400).json({ message: 'Invalid credentials.' });
         }
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
-            return res.status(400).json({ message: 'Invalid email or password.' });
+            return res.status(400).json({ message: 'Invalid credentials.' });
         }
-        const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, { expiresIn: '1h' });
-        res.status(200).json({ message: 'Login successful!', token });
+        // --- THIS IS THE REAL TOKEN GENERATION LOGIC ---
+         const payload = {
+            id: user.id,
+            email: user.email,
+            name: user.name // <-- Add the name here
+        };
+
+        // 2. Sign the new payload to create the token.
+        const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '8h' });
+        res.status(200).json({ token });
     } catch (error) {
         console.error("Login Error:", error);
         res.status(500).json({ message: 'Server error during login.' });

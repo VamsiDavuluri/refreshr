@@ -3,7 +3,9 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate, Link } from "react-router-dom";
-import axios from 'axios'; // <-- Import axios
+//import axios from 'axios'; // <-- Import axios
+import api from '../api'; // <-- THE FIX IS HERE
+
 import './AuthForm.css';
 
 const schema = yup.object().shape({
@@ -21,8 +23,8 @@ const Register = () => {
   const onSubmit = async (data) => {
     try {
       // Send a POST request to the backend registration endpoint
-      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/register`, data);
-      
+      const response = await api.post('/api/auth/register', data);
+
       // Show success message from the server and navigate to login
       alert(response.data.message);
       navigate("/login");

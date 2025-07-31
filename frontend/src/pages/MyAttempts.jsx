@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import api from "../../src/utils/api";
+import api from "../api";
 import Navbar from "../components/Navbar/Navbar";
 import "./MyAttempts.css";
 
@@ -23,18 +23,24 @@ const MyAttempts = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await api.get("/my-results");
-        setAttempts(response.data);
-      } catch (error) {
-        console.error("Failed to load user data", error);
-      } finally {
-        setLoading(false);
-      }
+    const fetchAllData = async () => {
+        setLoading(true);
+        // --- THE FIX IS HERE ---
+        // The path is now '/api/results/my-results'
+        const p1 = api.get('/api/results/my-results'); 
+        
+        // This route for generated quizzes is likely in quizRoutes.js, so its path is fine.
+        try {
+            const [resultsRes] = await Promise.all([p1]);
+            setAttempts(resultsRes.data);
+        } catch (error) {
+            console.error("Failed to load user data", error);
+        } finally {
+            setLoading(false);
+        }
     };
-    fetchData();
-  }, []);
+    fetchAllData();
+}, []);
 
   const navLinks = [
     { name: "Home", path: "/home" },

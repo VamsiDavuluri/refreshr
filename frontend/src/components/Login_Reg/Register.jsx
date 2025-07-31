@@ -1,62 +1,80 @@
-import React, { useState } from "react";
+// frontend/src/pages/Register.jsx
+
+import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
+import api from '../api';
+import './AuthForm.css';
 
-const schema = yup.object().shape({
-  email: yup.string().email("Invalid email").required("Email is required"),
-  password: yup.string().min(6, "Minimum 6 characters").required("Password is required"),
+const schema = yip.object().shape({
+  name: yup.string().required("Name is required"),
+  email: yup.string().email("Invalid email format").required("Email is required"),
+  password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
 });
 
 const Register = () => {
   const navigate = useNavigate();
-  const [error, setError] = useState("");
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({ resolver: yupResolver(schema) });
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(schema)
+  });
 
   const onSubmit = async (data) => {
-    setError("");
     try {
-      const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/register`,
-        data
-      );
+      const response = await api.post('/api/auth/register', data);
       alert(response.data.message);
       navigate("/login");
-    } catch (err) {
-      if (err.response?.data?.message) {
-        setError(err.response.data.message);
+    } catch (error) {
+      if (error.response && error.response.data) {
+        alert(error.response.data.message);
       } else {
-        setError("Registration failed. Please try again.");
+        alert("An error occurred during registration.");
       }
     }
   };
 
   return (
-    <div className="login-container">
-      <h2>Create Account</h2>
-      <form onSubmit={handleSubmit(onSubmit)} noValidate>
+    <div className="auth-form-container">
+      <form className="auth-form" onSubmit={handleSubmit(onSubmit)} noValidate>
+        <h2>Create Account</h2>
+        
+        {/* THIS IS THE FIELD THAT MUST APPEAR */}
+        <div className="form-group">
+          <label>Name</label>
+          <input 
+            type="text" 
+            placeholder="Enter your full name" 
+            {...register("name")} 
+          />
+          {errors.name && <p className="error-message">{errors.name.message}</p>}
+        </div>
+
         <div className="form-group">
           <label>Email</label>
-          <input type="email" {...register("email")} />
-          {errors.email && <p className="error">{errors.email.message}</p>}
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            {...register("email")} 
+          />
+          {errors.email && <p className="error-message">{errors.email.message}</p>}
         </div>
 
         <div className="form-group">
           <label>Password</label>
-          <input type="password" {...register("password")} />
-          {errors.password && <p className="error">{errors.password.message}</p>}
+          <input 
+            type="password" 
+            placeholder="Enter your password" 
+            {...register("password")} 
+          />
+          {errors.password && <p className="error-message">{errors.password.message}</p>}
         </div>
 
-        {error && <p className="error">{error}</p>}
-
-        <button type="submit" className="btn">Register</button>
+        <button type="submit" className="btn-submit">Register</button>
+        
+        <p className="redirect-link">
+          Already have an account? <Link to="/login">Log In</Link>
+        </p>
       </form>
     </div>
   );
